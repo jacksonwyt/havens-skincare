@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li className="flex items-center">
                 <FiMapPin className="mr-2 text-sand" />
-                <span>123 Ocean View Blvd, Newport Beach, CA 92660</span>
+                <span>2650 Avon Street, Newport Beach, CA 92663</span>
               </li>
               <li className="flex items-center">
                 <FiPhone className="mr-2 text-sand" />
@@ -102,4 +102,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

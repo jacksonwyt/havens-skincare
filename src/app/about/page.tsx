@@ -30,7 +30,7 @@ export default function About() {
               <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-xl">
                 <Image
                   src="/images/owner.jpg"
-                  alt="Emily Haven, Founder and Lead Esthetician"
+                  alt="Heather Havens, Founder and Lead Esthetician"
                   fill
                   style={{ objectFit: 'cover' }}
                 />
@@ -38,17 +38,20 @@ export default function About() {
             </div>
             <div className="lg:w-1/2">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                Meet Emily Haven
+                About Me
               </h2>
               <h3 className="text-xl text-seafoam mb-6">Founder & Lead Esthetician</h3>
               <p className="text-gray-600 mb-6">
-                With over 15 years of experience in the skincare industry, Emily brings a passion for coastal-inspired beauty to every treatment. Born and raised in Southern California, she combines her knowledge of advanced skincare techniques with the natural tranquility of beach living.
+                With over 30 years of expertise in the skincare industry, my journey began at the esteemed Dermal Institute, where I developed a deep understanding of advanced skincare techniques. I then refined my craft at the world-renowned Four Seasons, catering to an elite clientele seeking results-driven treatments in a luxurious setting.
               </p>
               <p className="text-gray-600 mb-6">
-                After training at one of Los Angeles&#39; most prestigious esthetics academies and working with celebrity clients, Emily decided to bring her expertise to Newport Beach, establishing Haven&#39;s Skincare in 2014. Her approach focuses on personalized care, using marine-derived ingredients that harness the healing properties of the ocean.
+                At 25, I launched my own facial studio, offering personalized skincare solutions tailored to the needs of discerning clients. My passion for corrective skincare led me to work alongside a top cosmetic dermatologist, where I specialized in treating acne-prone skin and mastering microdermabrasion techniques to restore balance and radiance.
               </p>
               <p className="text-gray-600 mb-6">
-                "I believe that skincare should be a rejuvenating experience that nurtures both the skin and the spirit. My goal is to create a haven where clients can escape, relax, and emerge with a natural, coastal glow."
+                After taking time to focus on my family and adopting a beautiful son along the way, life took an unexpected turn when I tragically lost my oldest son. In the wake of profound loss, I was guided back to my true passion—helping others achieve healthy, luminous skin. Skincare is more than a profession for me; it is a calling, a way to bring healing and confidence to those I touch.
+              </p>
+              <p className="text-gray-600 mb-6">
+                Now, I bring my decades of expertise, unwavering dedication, and personalized care to an exclusive clientele who seek not just treatments, but transformative skincare experiences. My goal is to create an oasis of renewal, where science meets luxury, and every client leaves feeling restored, radiant, and deeply cared for.
               </p>
               <div className="flex space-x-4">
                 <span className="inline-flex items-center text-seafoam">
@@ -157,4 +160,4 @@ export default function About() {
       </section>
     </div>
   );
-} 
+}

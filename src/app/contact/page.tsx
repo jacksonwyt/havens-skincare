@@ -41,8 +41,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-1">Our Location</h3>
-                    <p className="text-gray-600">123 Ocean View Blvd</p>
-                    <p className="text-gray-600">Newport Beach, CA 92660</p>
+                    <p className="text-gray-600">2650 Avon Street</p>
+                    <p className="text-gray-600">Newport Beach, CA 92663</p>
                   </div>
                 </div>
                 
@@ -153,7 +153,7 @@ export default function Contact() {
           
           <div className="mt-6 text-center">
             <a
-              href="https://maps.google.com/?q=Newport+Beach,CA" 
+              href="https://maps.google.com/?q=2650+Avon+Street,Newport+Beach,CA,92663" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-seafoam hover:underline"
@@ -178,4 +178,4 @@ export default function Contact() {
       </section>
     </div>
   );
-} 
+}
