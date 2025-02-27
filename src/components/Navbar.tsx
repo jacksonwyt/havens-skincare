@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center">
-                <span className="text-seafoam-text-dark font-georgia text-2xl font-semibold">Haven&#39;s</span>
+                <span className="text-seafoam font-georgia text-2xl font-semibold">Haven&#39;s</span>
                 <span className="ml-1 text-gray-700 font-georgia text-2xl">Skincare</span>
               </Link>
             </div>

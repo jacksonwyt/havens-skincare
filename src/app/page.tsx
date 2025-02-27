@@ -210,7 +210,7 @@ export default function Home() {
               </p>
             </div>
             <div data-aos="zoom-in" data-aos-delay="300">
-              <Link href="/booking" className="bg-white text-seafoam-text-dark px-8 py-3 rounded-md hover:bg-gray-100 transition duration-300 inline-block font-medium">
+              <Link href="/booking" className="bg-gray-800 text-seafoam-text-dark px-8 py-3 rounded-md hover:bg-gray-500 transition duration-300 inline-block font-medium">
                 Book Your Appointment
               </Link>
             </div>
