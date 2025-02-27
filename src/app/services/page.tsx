@@ -316,7 +316,7 @@ export default function Services() {
       {/* Hero Section */}
       <section className="relative py-20 bg-soft-blue bg-opacity-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center" data-aos="fade-up" data-aos-duration="1000">
             <h1 className="text-4xl font-bold text-gray-800 mb-6">Our Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover our range of premium treatments designed to rejuvenate your skin and enhance your natural beauty, all inspired by the healing elements of the California coast.
@@ -326,14 +326,14 @@ export default function Services() {
       </section>
 
       {/* Service Categories */}
-      {services.map((category) => (
+      {services.map((category, categoryIndex) => (
         <section 
           key={category.id} 
           id={category.id}
           className="py-16 bg-white"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
+            <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">{category.name}</h2>
               <p className="text-gray-600 max-w-3xl mx-auto">
                 {category.description}
@@ -346,6 +346,9 @@ export default function Services() {
                   key={service.id} 
                   id={service.id}
                   className={`flex flex-col md:flex-row gap-8 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
+                  data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                  data-aos-duration="800"
+                  data-aos-delay={index * 100}
                 >
                   <div className="md:w-1/2">
                     <div className="relative h-72 md:h-80 w-full rounded-lg overflow-hidden shadow-md">
@@ -361,16 +364,16 @@ export default function Services() {
                     <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.name}</h3>
                     <p className="text-gray-600 mb-6">{service.description}</p>
                     <div className="flex flex-wrap gap-6 mb-6">
-                      <div className="flex items-center text-seafoam">
+                      <div className="flex items-center text-seafoam-text-dark">
                         <FiDollarSign className="mr-2" />
                         <span>{service.price}</span>
                       </div>
-                      <div className="flex items-center text-seafoam">
+                      <div className="flex items-center text-seafoam-text-dark">
                         <FiClock className="mr-2" />
                         <span>{service.duration}</span>
                       </div>
                     </div>
-                    <Link href="/booking" className="btn-primary self-start">
+                    <Link href="/booking" className="btn-primary self-start" data-aos="zoom-in" data-aos-delay="200">
                       Book this Service
                     </Link>
                   </div>
@@ -384,78 +387,43 @@ export default function Services() {
       {/* FAQ Section */}
       <section className="py-16 bg-sand bg-opacity-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Find answers to common questions about our services and what to expect during your visit.
             </p>
           </div>
           
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
             <div className="space-y-6">
-              <details className="bg-white p-6 rounded-lg shadow-sm">
+              {/* FAQ items with staggered animations */}
+              <details className="bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="100">
                 <summary className="text-lg font-semibold text-gray-800 cursor-pointer flex justify-between items-center">
                   <span>How should I prepare for my facial treatment?</span>
                   <FiPlus className="text-seafoam" />
                 </summary>
                 <div className="mt-4 text-gray-600">
-                  <p>For the best results, we recommend the following:</p>
-                  <ul className="list-disc pl-5 mt-2 space-y-1">
-                    <li>Avoid sun exposure and tanning for 24-48 hours before your appointment</li>
-                    <li>Skip retinol products for 3-5 days prior to your facial</li>
-                    <li>Arrive with a clean face if possible (no makeup)</li>
-                    <li>Men should shave at least 2 hours before their facial</li>
-                    <li>Stay hydrated before your appointment</li>
-                  </ul>
+                  <p>For the best results, arrive with a clean face (no makeup). Avoid sun exposure and exfoliating products 48 hours before your treatment. Men should shave at least 2 hours before their facial. Stay hydrated and let us know about any skin sensitivities or medications you're taking.</p>
                 </div>
               </details>
-              
-              <details className="bg-white p-6 rounded-lg shadow-sm">
+
+              <details className="bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="200">
                 <summary className="text-lg font-semibold text-gray-800 cursor-pointer flex justify-between items-center">
                   <span>How often should I get a facial?</span>
                   <FiPlus className="text-seafoam" />
                 </summary>
                 <div className="mt-4 text-gray-600">
-                  <p>For optimal results, we typically recommend a facial every 4-6 weeks, as this aligns with your skin's natural cell turnover cycle. However, this can vary based on:</p>
-                  <ul className="list-disc pl-5 mt-2 space-y-1">
-                    <li>Your specific skin concerns</li>
-                    <li>The type of facial treatments you're receiving</li>
-                    <li>Your age and skin condition</li>
-                    <li>Seasonal changes that affect your skin</li>
-                  </ul>
-                  <p className="mt-2">During your initial consultation, we'll recommend a personalized treatment schedule to help you achieve your skincare goals.</p>
+                  <p>For optimal results, we recommend a facial every 4-6 weeks, which aligns with your skin's natural cell turnover cycle. However, this can vary based on your skin type, concerns, and goals. Your esthetician will recommend a personalized treatment schedule during your consultation.</p>
                 </div>
               </details>
-              
-              <details className="bg-white p-6 rounded-lg shadow-sm">
+
+              <details className="bg-white p-6 rounded-lg shadow-sm" data-aos="fade-up" data-aos-delay="300">
                 <summary className="text-lg font-semibold text-gray-800 cursor-pointer flex justify-between items-center">
-                  <span>What if I need to cancel or reschedule my appointment?</span>
+                  <span>What should I expect after a chemical peel?</span>
                   <FiPlus className="text-seafoam" />
                 </summary>
                 <div className="mt-4 text-gray-600">
-                  <p>We understand that plans change. Our cancellation policy is as follows:</p>
-                  <ul className="list-disc pl-5 mt-2 space-y-1">
-                    <li>Please provide at least 24 hours' notice for cancellations or reschedules</li>
-                    <li>Late cancellations (less than 24 hours) may incur a 50% service fee</li>
-                    <li>No-shows will be charged the full service amount</li>
-                  </ul>
-                  <p className="mt-2">If you're running late, please call us as soon as possible so we can adjust our schedule accordingly.</p>
-                </div>
-              </details>
-              
-              <details className="bg-white p-6 rounded-lg shadow-sm">
-                <summary className="text-lg font-semibold text-gray-800 cursor-pointer flex justify-between items-center">
-                  <span>Do you offer gift certificates?</span>
-                  <FiPlus className="text-seafoam" />
-                </summary>
-                <div className="mt-4 text-gray-600">
-                  <p>Yes! Gift certificates are available for all of our services and make the perfect present for any occasion. They can be purchased:</p>
-                  <ul className="list-disc pl-5 mt-2 space-y-1">
-                    <li>In-studio during our business hours</li>
-                    <li>By phone at (949) 555-1234</li>
-                    <li>Online through our booking page</li>
-                  </ul>
-                  <p className="mt-2">Gift certificates are valid for one year from the purchase date.</p>
+                  <p>Post-peel reactions vary depending on the type and strength of your peel. You may experience redness, sensitivity, and peeling for 3-7 days. It's crucial to avoid sun exposure, use gentle products, and apply SPF daily. Your esthetician will provide detailed aftercare instructions specifically for your treatment.</p>
                 </div>
               </details>
             </div>
@@ -464,19 +432,22 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-seafoam bg-opacity-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Ready to Experience the Haven Difference?</h2>
-          <p className="text-gray-600 max-w-3xl mx-auto mb-8">
-            Book your appointment today and begin your journey to radiant, healthy skin with Haven&#39;s Skincare.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="/booking" className="btn-primary">
-              Book an Appointment
-            </Link>
-            <Link href="/contact" className="btn-secondary">
-              Contact Us
-            </Link>
+      <section className="py-16 bg-seafoam">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-8 md:mb-0 md:mr-8">
+              <h2 className="text-3xl font-bold text-white mb-4 hero-text-shadow">
+                Ready to Book Your Treatment?
+              </h2>
+              <p className="text-white text-lg max-w-xl hero-text-shadow">
+                Schedule your appointment today and experience the Haven's difference.
+              </p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300">
+              <Link href="/booking" className="bg-white text-seafoam-text-dark px-8 py-3 rounded-md hover:bg-gray-100 transition duration-300 inline-block font-medium">
+                Book Your Appointment
+              </Link>
+            </div>
           </div>
         </div>
       </section>

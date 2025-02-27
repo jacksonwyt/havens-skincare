@@ -48,7 +48,7 @@ const TestimonialSlider: React.FC = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       goToNext();
-    }, 8000); // Change testimonial every 8 seconds
+    }, 8000);
 
     return () => clearInterval(intervalId);
   }, [currentIndex]);
@@ -91,72 +91,86 @@ const TestimonialSlider: React.FC = () => {
   };
 
   return (
-    <div className="relative">
-      <div className="overflow-hidden">
-        <div 
-          className={`flex transition-opacity duration-500 ${isAnimating ? 'opacity-0' : 'opacity-100'}`}
-        >
-          <div className="w-full px-4">
-            <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
-              <div className="flex flex-col md:flex-row items-center">
-                <div className="md:w-1/3 mb-6 md:mb-0 flex justify-center">
-                  <div className="relative w-24 h-24 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-soft-blue">
-                    <Image 
-                      src={testimonials[currentIndex].image} 
-                      alt={testimonials[currentIndex].name}
-                      fill
-                      style={{ objectFit: 'cover' }}
-                    />
-                  </div>
-                </div>
-                <div className="md:w-2/3 md:pl-8">
-                  <div className="flex mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <FiStar 
-                        key={i} 
-                        className={`${i < testimonials[currentIndex].rating ? 'text-yellow-400 fill-current' : 'text-gray-300'} w-5 h-5`} 
-                      />
-                    ))}
-                  </div>
-                  <blockquote className="text-gray-600 italic mb-6">
-                    "{testimonials[currentIndex].quote}"
-                  </blockquote>
-                  <div>
-                    <p className="font-bold text-gray-800">{testimonials[currentIndex].name}</p>
-                    <p className="text-gray-500 text-sm">{testimonials[currentIndex].role}</p>
-                  </div>
-                </div>
+    <div className="relative" data-aos="fade-up" data-aos-duration="800">
+      {/* Main testimonial card */}
+      <div className={`bg-white rounded-lg shadow-lg overflow-hidden 
+                      transition-opacity duration-500 
+                      ${isAnimating ? 'opacity-0' : 'opacity-100'}`}>
+        <div className="flex flex-col md:flex-row">
+          {/* Testimonial image */}
+          <div className="relative w-full md:w-2/5 h-64 md:h-auto">
+            <Image
+              src={testimonials[currentIndex].image}
+              alt={testimonials[currentIndex].name}
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+          
+          {/* Testimonial content */}
+          <div className="w-full md:w-3/5 p-6 md:p-8 bg-sand bg-opacity-40">
+            <div className="flex items-center mb-4">
+              {[...Array(5)].map((_, i) => (
+                <FiStar 
+                  key={i} 
+                  className={`${i < testimonials[currentIndex].rating 
+                    ? 'text-seafoam-text-dark' 
+                    : 'text-gray-300'} w-5 h-5`} 
+                  fill={i < testimonials[currentIndex].rating ? '#49a596' : 'none'}
+                />
+              ))}
+            </div>
+            
+            <blockquote className="mb-6">
+              <p className="text-gray-800 italic testimonial-text">
+                "{testimonials[currentIndex].quote}"
+              </p>
+            </blockquote>
+            
+            <div className="flex items-center">
+              <div>
+                <p className="font-semibold text-gray-800">{testimonials[currentIndex].name}</p>
+                <p className="text-seafoam-text-dark">{testimonials[currentIndex].role}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Navigation buttons */}
-      <button 
-        onClick={goToPrevious}
-        className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition duration-300 focus:outline-none"
-        aria-label="Previous testimonial"
-      >
-        <FiChevronLeft className="text-seafoam w-6 h-6" />
-      </button>
       
-      <button 
-        onClick={goToNext}
-        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition duration-300 focus:outline-none"
-        aria-label="Next testimonial"
-      >
-        <FiChevronRight className="text-seafoam w-6 h-6" />
-      </button>
-
+      {/* Navigation arrows */}
+      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10">
+        <button 
+          onClick={goToPrevious}
+          className="bg-seafoam text-white rounded-full p-2 shadow-md hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-seafoam focus:ring-opacity-50 transition"
+          aria-label="Previous testimonial"
+        >
+          <FiChevronLeft className="w-6 h-6" />
+        </button>
+      </div>
+      
+      <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10">
+        <button 
+          onClick={goToNext}
+          className="bg-seafoam text-white rounded-full p-2 shadow-md hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-seafoam focus:ring-opacity-50 transition"
+          aria-label="Next testimonial"
+        >
+          <FiChevronRight className="w-6 h-6" />
+        </button>
+      </div>
+      
       {/* Indicator dots */}
       <div className="flex justify-center mt-6 space-x-2">
         {testimonials.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSpecific(index)}
-            className={`w-3 h-3 rounded-full transition-colors duration-300 focus:outline-none ${index === currentIndex ? 'bg-seafoam' : 'bg-gray-300'}`}
+            className={`w-3 h-3 rounded-full ${
+              index === currentIndex 
+                ? 'bg-seafoam' 
+                : 'bg-gray-300 hover:bg-gray-400'
+            } transition duration-300 focus:outline-none`}
             aria-label={`Go to testimonial ${index + 1}`}
+            aria-current={index === currentIndex ? 'true' : 'false'}
           />
         ))}
       </div>

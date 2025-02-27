@@ -13,7 +13,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative py-20 bg-soft-blue bg-opacity-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center" data-aos="fade-up" data-aos-duration="1000">
             <h1 className="text-4xl font-bold text-gray-800 mb-6">About Haven&#39;s Skincare</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Bringing coastal tranquility and skin rejuvenation to Newport Beach since 2014.
@@ -26,7 +26,7 @@ export default function About() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2" data-aos="fade-right" data-aos-duration="800">
               <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-xl">
                 <Image
                   src="/images/owner.jpg"
@@ -36,11 +36,11 @@ export default function About() {
                 />
               </div>
             </div>
-            <div className="lg:w-1/2">
+            <div className="lg:w-1/2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 About Me
               </h2>
-              <h3 className="text-xl text-seafoam mb-6">Founder & Lead Esthetician</h3>
+              <h3 className="text-xl text-seafoam-text-dark mb-6">Founder & Lead Esthetician</h3>
               <p className="text-gray-600 mb-6">
                 With over 30 years of expertise in the skincare industry, my journey began at the esteemed Dermal Institute, where I developed a deep understanding of advanced skincare techniques. I then refined my craft at the world-renowned Four Seasons, catering to an elite clientele seeking results-driven treatments in a luxurious setting.
               </p>
@@ -53,11 +53,11 @@ export default function About() {
               <p className="text-gray-600 mb-6">
                 Now, I bring my decades of expertise, unwavering dedication, and personalized care to an exclusive clientele who seek not just treatments, but transformative skincare experiences. My goal is to create an oasis of renewal, where science meets luxury, and every client leaves feeling restored, radiant, and deeply cared for.
               </p>
-              <div className="flex space-x-4">
-                <span className="inline-flex items-center text-seafoam">
+              <div className="flex space-x-4" data-aos="fade-up" data-aos-delay="400">
+                <span className="inline-flex items-center text-seafoam-text-dark">
                   <FiAward className="mr-2" /> Licensed Esthetician
                 </span>
-                <span className="inline-flex items-center text-seafoam">
+                <span className="inline-flex items-center text-seafoam-text-dark">
                   <FiSun className="mr-2" /> Advanced Training
                 </span>
               </div>
@@ -69,19 +69,19 @@ export default function About() {
       {/* Our Mission */}
       <section className="py-16 bg-sand bg-opacity-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
             <div className="w-24 h-1 bg-seafoam mx-auto"></div>
           </div>
           
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
             <p className="text-xl text-gray-700 italic mb-8">
               "To enhance your natural beauty with personalized, coastal-inspired treatments that rejuvenate both skin and spirit."
             </p>
             <p className="text-gray-600 mb-8">
               At Haven&#39;s Skincare, we&#39;re dedicated to providing exceptional skincare services in a peaceful, luxurious environment. We combine the latest skincare innovations with the natural healing elements of the California coast to deliver treatments that leave you feeling refreshed, renewed, and radiant.
             </p>
-            <div className="inline-flex items-center text-seafoam">
+            <div className="inline-flex items-center text-seafoam-text-dark" data-aos="zoom-in" data-aos-delay="400">
               <FiHeart className="mr-2" /> Personalized Care For Every Client
             </div>
           </div>
@@ -91,50 +91,44 @@ export default function About() {
       {/* Our Approach */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
             <h2 className="text-3xl font-bold text-gray-800 mb-4">The Haven Approach</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Our philosophy combines scientific expertise with the natural healing elements of the California coast.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {/* Approach 1 */}
-            <div className="bg-soft-blue bg-opacity-10 rounded-lg p-8 text-center">
-              <div className="w-16 h-16 bg-seafoam rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-white">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
+            <div className="bg-sand bg-opacity-20 rounded-lg p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-seafoam text-white mb-6">
+                <FiHeart className="text-2xl" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Personalized Assessment</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Personal Attention</h3>
               <p className="text-gray-600">
-                Every treatment begins with a thorough skin analysis to create a customized plan tailored to your unique needs and goals.
+                Every treatment is customized to your unique skin concerns and goals, with dedicated attention from start to finish.
               </p>
             </div>
             
             {/* Approach 2 */}
-            <div className="bg-soft-blue bg-opacity-10 rounded-lg p-8 text-center">
-              <div className="w-16 h-16 bg-seafoam rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-white">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                </svg>
+            <div className="bg-sand bg-opacity-20 rounded-lg p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-seafoam text-white mb-6">
+                <FiAward className="text-2xl" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Ocean-Inspired Products</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Premium Products</h3>
               <p className="text-gray-600">
-                We use premium marine-derived ingredients that harness the healing and rejuvenating properties of the ocean.
+                We use only the highest quality, professionally-formulated products with proven results and ocean-inspired ingredients.
               </p>
             </div>
             
             {/* Approach 3 */}
-            <div className="bg-soft-blue bg-opacity-10 rounded-lg p-8 text-center">
-              <div className="w-16 h-16 bg-seafoam rounded-full flex items-center justify-center mx-auto mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 text-white">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+            <div className="bg-sand bg-opacity-20 rounded-lg p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-seafoam text-white mb-6">
+                <FiSun className="text-2xl" />
               </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Holistic Wellness</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">Coastal Serenity</h3>
               <p className="text-gray-600">
-                Our treatments nurture both skin and spirit, creating a peaceful experience that leaves you feeling completely renewed.
+                Our tranquil environment is designed to soothe the senses, inspired by the peaceful beauty of the California coastline.
               </p>
             </div>
           </div>
@@ -142,19 +136,22 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-seafoam bg-opacity-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">Experience the Haven Difference</h2>
-          <p className="text-gray-600 max-w-3xl mx-auto mb-8">
-            We invite you to visit our Newport Beach studio and discover the perfect treatment for your skincare needs.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link href="/services" className="btn-primary">
-              Explore Our Services
-            </Link>
-            <Link href="/booking" className="btn-secondary">
-              Book an Appointment
-            </Link>
+      <section className="py-16 bg-seafoam">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="mb-8 md:mb-0 md:mr-8">
+              <h2 className="text-3xl font-bold text-white mb-4 hero-text-shadow">
+                Ready to Experience the Haven Difference?
+              </h2>
+              <p className="text-white text-lg max-w-xl hero-text-shadow">
+                Book your consultation today and begin your journey to radiant, healthy skin.
+              </p>
+            </div>
+            <div data-aos="zoom-in" data-aos-delay="300">
+              <Link href="/booking" className="bg-white text-seafoam-text-dark px-8 py-3 rounded-md hover:bg-gray-100 transition duration-300 inline-block font-medium">
+                Book Your Appointment
+              </Link>
+            </div>
           </div>
         </div>
       </section>
