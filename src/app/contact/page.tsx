@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi';
 import ContactForm from '@/components/ContactForm';
 
@@ -108,32 +107,6 @@ export default function Contact() {
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
                 <ContactForm />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-16 bg-soft-blue bg-opacity-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Location</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Located in the heart of Newport Beach, our studio is easily accessible with ample parking available.
-            </p>
-          </div>
-          
-          <div className="rounded-lg overflow-hidden shadow-lg h-96 relative" data-aos="zoom-in" data-aos-delay="200">
-            <Image
-              src="/images/map.jpg"
-              alt="Map location of Haven's Skincare in Newport Beach"
-              fill
-              style={{ objectFit: "cover" }}
-            />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Link href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="bg-seafoam text-white px-6 py-3 rounded-md shadow-md hover:bg-opacity-90 transition duration-300">
-                Get Directions
-              </Link>
             </div>
           </div>
         </div>

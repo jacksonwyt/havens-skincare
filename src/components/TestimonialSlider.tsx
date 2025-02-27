@@ -111,12 +111,12 @@ const TestimonialSlider: React.FC = () => {
   return (
     <div className="relative py-10" data-aos="fade-up" data-aos-duration="800" ref={sliderRef}>
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-seafoam/10 rounded-full blur-3xl -z-10 transform translate-x-1/2 -translate-y-1/4"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-sand/10 rounded-full blur-3xl -z-10 transform -translate-x-1/2 translate-y-1/4"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 bg-haven-blue/10 rounded-full blur-3xl -z-10 transform translate-x-1/2 -translate-y-1/4"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-haven-blue/10 rounded-full blur-3xl -z-10 transform -translate-x-1/2 translate-y-1/4"></div>
       
       {/* Main testimonial card */}
       <div 
-        className={`bg-white/40 backdrop-blur-md rounded-lg shadow-lg overflow-hidden 
+        className={`bg-white/60 backdrop-blur-md rounded-lg shadow-lg overflow-hidden 
                   border border-white/30 transition-all duration-700 ease-out
                   ${isAnimating ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}
         style={{ 
@@ -154,9 +154,9 @@ const TestimonialSlider: React.FC = () => {
                   <FiStar 
                     key={i} 
                     className={`${i < testimonials[currentIndex].rating 
-                      ? 'text-seafoam' 
+                      ? 'text-haven-blue' 
                       : 'text-gray-300'} w-4 h-4`} 
-                    fill={i < testimonials[currentIndex].rating ? '#FFCFEF' : 'none'}
+                    fill={i < testimonials[currentIndex].rating ? '#0c5cb4' : 'none'}
                   />
                 ))}
               </div>
@@ -165,23 +165,23 @@ const TestimonialSlider: React.FC = () => {
           </div>
           
           {/* Testimonial content */}
-          <div className="w-full md:w-3/5 p-6 md:p-8 bg-sand/20">            
+          <div className="w-full md:w-3/5 p-6 md:p-8 bg-haven-blue/10">            
             <blockquote className="mb-6 relative">
-              <div className="absolute -top-6 -left-4 text-seafoam opacity-20 text-6xl font-serif">"</div>
-              <p className="text-gray-800 italic testimonial-text relative z-10">
+              <div className="absolute -top-6 -left-4 text-haven-blue opacity-20 text-6xl font-serif">"</div>
+              <p className="text-white italic testimonial-text relative z-10">
                 "{testimonials[currentIndex].quote}"
               </p>
-              <div className="absolute -bottom-4 -right-2 text-seafoam opacity-20 text-6xl font-serif">"</div>
+              <div className="absolute -bottom-4 -right-2 text-haven-blue opacity-20 text-6xl font-serif">"</div>
             </blockquote>
             
             <div className="flex items-center justify-between">
               <div>
-                <p className="font-semibold text-gray-800 text-lg">{testimonials[currentIndex].name}</p>
-                <p className="text-seafoam">{testimonials[currentIndex].role}</p>
+                <p className="font-semibold text-white text-lg">{testimonials[currentIndex].name}</p>
+                <p className="text-haven-blue">{testimonials[currentIndex].role}</p>
               </div>
               
-              <div className="hidden md:block bg-seafoam/10 rounded-full px-3 py-1">
-                <span className="text-sm text-seafoam font-medium">Verified Customer</span>
+              <div className="hidden md:block bg-haven-blue/20 rounded-full px-3 py-1">
+                <span className="text-sm text-haven-blue font-medium">Verified Customer</span>
               </div>
             </div>
           </div>
@@ -197,7 +197,7 @@ const TestimonialSlider: React.FC = () => {
       >
         <button 
           onClick={goToPrevious}
-          className="bg-seafoam/90 backdrop-blur-sm text-white rounded-full p-2.5 shadow-lg hover:bg-seafoam focus:outline-none focus:ring-2 focus:ring-seafoam focus:ring-opacity-50 transition-all duration-300 hover:scale-110"
+          className="bg-haven-blue text-white rounded-full p-2.5 shadow-lg hover:bg-haven-blue/80 focus:outline-none focus:ring-2 focus:ring-haven-blue focus:ring-opacity-50 transition-all duration-300 hover:scale-110"
           aria-label="Previous testimonial"
         >
           <FiChevronLeft className="w-5 h-5" />
@@ -212,26 +212,24 @@ const TestimonialSlider: React.FC = () => {
       >
         <button 
           onClick={goToNext}
-          className="bg-seafoam/90 backdrop-blur-sm text-white rounded-full p-2.5 shadow-lg hover:bg-seafoam focus:outline-none focus:ring-2 focus:ring-seafoam focus:ring-opacity-50 transition-all duration-300 hover:scale-110"
+          className="bg-haven-blue text-white rounded-full p-2.5 shadow-lg hover:bg-haven-blue/80 focus:outline-none focus:ring-2 focus:ring-haven-blue focus:ring-opacity-50 transition-all duration-300 hover:scale-110"
           aria-label="Next testimonial"
         >
           <FiChevronRight className="w-5 h-5" />
         </button>
       </div>
       
-      {/* Indicator dots */}
+      {/* Indicators */}
       <div className="flex justify-center mt-6 space-x-2">
         {testimonials.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSpecific(index)}
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-500 ${
-              index === currentIndex 
-                ? 'bg-seafoam w-6' 
-                : 'bg-gray-300 hover:bg-gray-400'
-            } focus:outline-none`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 focus:outline-none 
+                      ${currentIndex === index 
+                        ? 'bg-haven-blue scale-125' 
+                        : 'bg-haven-blue/30 hover:bg-haven-blue/50'}`}
             aria-label={`Go to testimonial ${index + 1}`}
-            aria-current={index === currentIndex ? 'true' : 'false'}
           />
         ))}
       </div>

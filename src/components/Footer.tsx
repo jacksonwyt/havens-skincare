@@ -5,10 +5,10 @@ import { FiMapPin, FiPhone, FiMail, FiClock, FiFacebook, FiInstagram, FiTwitter 
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-b from-gray-800/90 to-gray-900/95 backdrop-blur-sm text-white pt-16 pb-6 overflow-hidden">
+    <footer className="relative bg-gradient-to-b from-haven-blue/90 to-gray-900/95 backdrop-blur-sm text-white pt-16 pb-6 overflow-hidden">
       {/* Wave pattern at the top */}
-      <div className="absolute top-0 left-0 right-0 w-full h-4 bg-haven-blue/20"></div>
-      <div className="absolute top-4 left-0 right-0 w-full h-2 bg-haven-blue/10"></div>
+      <div className="absolute top-0 left-0 right-0 w-full h-4 bg-haven-blue/30"></div>
+      <div className="absolute top-4 left-0 right-0 w-full h-2 bg-haven-blue/20"></div>
       
       {/* Decorative coastal elements */}
       <div className="absolute top-0 left-0 right-0 opacity-10">
@@ -16,55 +16,55 @@ const Footer = () => {
       </div>
       
       {/* Glass circular decorations */}
-      <div className="absolute top-16 right-16 w-64 h-64 rounded-full bg-haven-blue/10 backdrop-blur-sm mix-blend-overlay animate-float-slow hidden lg:block"></div>
-      <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-sand/5 backdrop-blur-sm mix-blend-overlay animate-float-slower hidden lg:block"></div>
+      <div className="absolute top-16 right-16 w-64 h-64 rounded-full bg-haven-blue/20 backdrop-blur-sm mix-blend-overlay animate-float-slow hidden lg:block"></div>
+      <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-haven-blue/10 backdrop-blur-sm mix-blend-overlay animate-float-slower hidden lg:block"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {/* About */}
-          <div className="bg-haven-blue/20 backdrop-blur-sm rounded-lg p-6 border border-white/10 transform transition-transform duration-500 hover:-translate-y-2 shadow-lg">
-            <h3 className="text-2xl font-bold mb-4 text-white">Haven's Skincare</h3>
+          <div className="bg-haven-blue/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 transform transition-transform duration-500 hover:-translate-y-2 shadow-lg">
+            <h3 className="text-2xl font-bold mb-4 text-white">Havens Skincare</h3>
             <p className="mb-4 footer-link">
               A luxury esthetician studio in Newport Beach, California, providing personalized skincare treatments in a serene coastal-inspired environment.
             </p>
             <div className="flex space-x-4">
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" 
-                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group">
+                 className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center backdrop-blur-sm hover:bg-white/25 transition-all duration-300 group">
                 <FiFacebook className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
               </a>
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group">
+                 className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center backdrop-blur-sm hover:bg-white/25 transition-all duration-300 group">
                 <FiInstagram className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
               </a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
-                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center backdrop-blur-sm hover:bg-white/20 transition-all duration-300 group">
+                 className="w-10 h-10 rounded-full bg-white/15 flex items-center justify-center backdrop-blur-sm hover:bg-white/25 transition-all duration-300 group">
                 <FiTwitter className="w-5 h-5 text-white group-hover:scale-110 transition-transform duration-300" />
               </a>
             </div>
           </div>
 
           {/* Contact Info */}
-          <div className="bg-haven-blue/20 backdrop-blur-sm rounded-lg p-6 border border-white/10 transform transition-transform duration-500 hover:-translate-y-2 shadow-lg">
+          <div className="bg-haven-blue/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 transform transition-transform duration-500 hover:-translate-y-2 shadow-lg">
             <h3 className="text-xl font-bold mb-4 text-white">Contact Us</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <div className="bg-white/20 backdrop-blur-sm rounded-full p-2 mr-3 flex-shrink-0">
+                <div className="bg-white/25 backdrop-blur-sm rounded-full p-2 mr-3 flex-shrink-0">
                   <FiMapPin className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <span className="footer-link">123 Ocean Avenue<br />Newport Beach, CA 92663</span>
+                  <span className="footer-link">2650 Avon Street<br />Newport Beach, CA 92663</span>
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="bg-white/20 backdrop-blur-sm rounded-full p-2 mr-3 flex-shrink-0">
+                <div className="bg-white/25 backdrop-blur-sm rounded-full p-2 mr-3 flex-shrink-0">
                   <FiPhone className="w-4 h-4 text-white" />
                 </div>
                 <div className="mt-1">
-                  <span className="footer-link">(949) 555-1234</span>
+                  <span className="footer-link">(949) 375-3632</span>
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="bg-white/20 backdrop-blur-sm rounded-full p-2 mr-3 flex-shrink-0">
+                <div className="bg-white/25 backdrop-blur-sm rounded-full p-2 mr-3 flex-shrink-0">
                   <FiMail className="w-4 h-4 text-white" />
                 </div>
                 <div className="mt-1">
@@ -72,7 +72,7 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-start">
-                <div className="bg-white/20 backdrop-blur-sm rounded-full p-2 mr-3 flex-shrink-0">
+                <div className="bg-white/25 backdrop-blur-sm rounded-full p-2 mr-3 flex-shrink-0">
                   <FiClock className="w-4 h-4 text-white" />
                 </div>
                 <div>
@@ -87,7 +87,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="bg-haven-blue/20 backdrop-blur-sm rounded-lg p-6 border border-white/10 transform transition-transform duration-500 hover:-translate-y-2 shadow-lg">
+          <div className="bg-haven-blue/30 backdrop-blur-sm rounded-lg p-6 border border-white/10 transform transition-transform duration-500 hover:-translate-y-2 shadow-lg">
             <h3 className="text-xl font-bold mb-4 text-white">Quick Links</h3>
             <ul className="space-y-2">
               <li>
@@ -123,30 +123,12 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter */}
-          <div className="bg-haven-blue/20 backdrop-blur-sm rounded-lg p-6 border border-white/10 transform transition-transform duration-500 hover:-translate-y-2 shadow-lg">
-            <h3 className="text-xl font-bold mb-4 text-white">Subscribe</h3>
-            <p className="mb-4 footer-link">
-              Stay updated with our latest treatments, skincare tips, and special offers.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-4 py-2 rounded-md bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white text-white backdrop-blur-sm placeholder-white/50"
-                aria-label="Email for newsletter"
-              />
-              <button type="submit" className="bg-seafoam/80 text-white px-4 py-2 rounded-md hover:bg-seafoam transition-colors duration-300 backdrop-blur-sm shadow-md border border-white/20">
-                Subscribe
-              </button>
-            </form>
-          </div>
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="footer-link text-sm">
-              &copy; {new Date().getFullYear()} Haven's Skincare. All rights reserved.
+              &copy; {new Date().getFullYear()} Havens Skincare. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy-policy" className="footer-link text-sm hover:underline">
