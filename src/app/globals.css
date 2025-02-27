@@ -9,15 +9,17 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 240, 225, 197; /* Light Sand */
+  --background-start-rgb: 235, 230, 215; /* Lighter, less saturated sand color */
   --background-end-rgb: 255, 255, 255;
+  --haven-blue-rgb: 12, 92, 180; /* Haven blue color in RGB format */
+  --seafoam-rgb: 235, 199, 230; /* Seafoam pink color in RGB format */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 30, 35, 40; /* Slightly lighter dark background */
+    --background-end-rgb: 40, 45, 50; /* Slightly varied dark background end */
   }
 }
 
@@ -38,11 +40,28 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom button styles */
 .btn-primary {
-  @apply bg-seafoam text-white px-6 py-2 rounded-md hover:bg-opacity-90 transition duration-300;
+  @apply bg-seafoam/80 text-white px-6 py-2 rounded-md hover:bg-seafoam transition duration-300 backdrop-blur-sm shadow-md border border-white/20;
 }
 
 .btn-secondary {
-  @apply bg-sand text-gray-800 px-6 py-2 rounded-md hover:bg-opacity-90 transition duration-300;
+  @apply bg-white/30 text-gray-800 px-6 py-2 rounded-md hover:bg-white/50 transition duration-300 backdrop-blur-sm shadow-md border border-white/20;
+}
+
+/* Section and card styles */
+.section-blue {
+  @apply bg-haven-blue/20 backdrop-blur-sm rounded-lg border border-white/10 shadow-lg;
+}
+
+.section-white {
+  @apply bg-white/70 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg;
+}
+
+.card-glass {
+  @apply bg-white/30 backdrop-blur-sm rounded-lg p-6 border border-white/20 shadow-lg transform transition-transform duration-500 hover:-translate-y-2;
+}
+
+.card-blue {
+  @apply bg-haven-blue/20 backdrop-blur-sm rounded-lg p-6 border border-white/10 shadow-lg transform transition-transform duration-500 hover:-translate-y-2;
 }
 
 /* Animation for elements */
@@ -75,6 +94,10 @@ h1, h2, h3, h4, h5, h6 {
   @apply text-gray-800;
 }
 
+.text-on-haven-blue {
+  @apply text-white;
+}
+
 /* Text shadows for better contrast over images */
 .hero-text-shadow {
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -93,6 +116,11 @@ h1, h2, h3, h4, h5, h6 {
 /* Ensure seafoam text is dark enough on light backgrounds */
 .seafoam-text-dark {
   @apply text-seafoam font-medium;
+}
+
+/* Blue text style */
+.haven-blue-text {
+  @apply text-haven-blue font-medium;
 }
 
 /* Improved accessibility for light text on colored backgrounds */
@@ -128,3 +156,124 @@ h1, h2, h3, h4, h5, h6 {
 .stagger-8 { transition-delay: 800ms; }
 .stagger-9 { transition-delay: 900ms; }
 .stagger-10 { transition-delay: 1000ms; }
+
+/* Glass morphism styles */
+.glass {
+  @apply bg-white/40 backdrop-blur-md border border-white/20 shadow-lg;
+}
+
+.glass-dark {
+  @apply bg-gray-900/40 backdrop-blur-md border border-gray-800/40 shadow-lg;
+}
+
+/* Wave animation for hero */
+.waves {
+  @apply absolute bottom-0 left-0 w-full h-24 min-w-[1000px];
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  transform: translateZ(0);
+}
+
+.wave1 {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 24 150 28' preserveAspectRatio='none' shape-rendering='auto'%3E%3Cdefs%3E%3Cpath id='gentle-wave' d='M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z' /%3E%3C/defs%3E%3Cg class='parallax'%3E%3Cuse href='%23gentle-wave' x='48' y='0' fill='rgba(255,207,239,0.3)' /%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.7;
+  animation: wave 25s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  z-index: 11;
+}
+
+.wave2 {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 24 150 28' preserveAspectRatio='none' shape-rendering='auto'%3E%3Cdefs%3E%3Cpath id='gentle-wave' d='M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z' /%3E%3C/defs%3E%3Cg class='parallax'%3E%3Cuse href='%23gentle-wave' x='48' y='5' fill='rgba(10,151,176,0.2)' /%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+  animation: wave 20s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  animation-delay: -5s;
+  z-index: 10;
+}
+
+.wave3 {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 24 150 28' preserveAspectRatio='none' shape-rendering='auto'%3E%3Cdefs%3E%3Cpath id='gentle-wave' d='M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z' /%3E%3C/defs%3E%3Cg class='parallax'%3E%3Cuse href='%23gentle-wave' x='48' y='7' fill='rgba(10,94,176,0.2)' /%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  animation: wave 15s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+  animation-delay: -2s;
+  z-index: 9;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Floating animations for decorative elements */
+.animate-float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-slower {
+  animation: float 12s ease-in-out infinite;
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-10px) translateX(10px);
+  }
+  50% {
+    transform: translateY(0px) translateX(0px);
+  }
+  75% {
+    transform: translateY(10px) translateX(-10px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+/* Water-inspired loading animation */
+.loading-wave {
+  @apply w-full h-1 relative overflow-hidden bg-gray-200 rounded-full;
+}
+
+.loading-wave::before {
+  content: '';
+  @apply absolute top-0 left-0 right-0 bottom-0 bg-seafoam;
+  animation: waveLoading 2s ease-in-out infinite;
+}
+
+@keyframes waveLoading {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Custom cursor style */
+@media (pointer: fine) {
+  .custom-cursor {
+    cursor: none;
+  }
+  
+  .cursor-dot {
+    @apply fixed w-3 h-3 rounded-full bg-seafoam pointer-events-none z-[9999] transform -translate-x-1/2 -translate-y-1/2;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+  }
+  
+  .cursor-outline {
+    @apply fixed w-8 h-8 rounded-full border border-seafoam pointer-events-none z-[9998] transform -translate-x-1/2 -translate-y-1/2;
+    transition: transform 0.5s ease;
+  }
+}

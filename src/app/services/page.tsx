@@ -340,40 +340,38 @@ export default function Services() {
               </p>
             </div>
             
-            <div className="space-y-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {category.items.map((service, index) => (
                 <div 
                   key={service.id} 
                   id={service.id}
-                  className={`flex flex-col md:flex-row gap-8 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
-                  data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                  className="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col"
+                  data-aos="fade-up"
                   data-aos-duration="800"
                   data-aos-delay={index * 100}
                 >
-                  <div className="md:w-1/2">
-                    <div className="relative h-72 md:h-80 w-full rounded-lg overflow-hidden shadow-md">
-                      <Image
-                        src={service.image}
-                        alt={service.name}
-                        fill
-                        style={{ objectFit: 'cover' }}
-                      />
-                    </div>
+                  <div className="relative h-52 w-full overflow-hidden">
+                    <Image
+                      src={service.image}
+                      alt={service.name}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                    />
                   </div>
-                  <div className="md:w-1/2 flex flex-col justify-center">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">{service.name}</h3>
-                    <p className="text-gray-600 mb-6">{service.description}</p>
-                    <div className="flex flex-wrap gap-6 mb-6">
-                      <div className="flex items-center text-seafoam-text-dark">
-                        <FiDollarSign className="mr-2" />
+                  <div className="p-5 flex flex-col flex-grow">
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">{service.name}</h3>
+                    <p className="text-gray-600 text-sm mb-4 flex-grow">{service.description}</p>
+                    <div className="flex flex-wrap gap-4 mb-4">
+                      <div className="flex items-center text-seafoam-text-dark text-sm">
+                        <FiDollarSign className="mr-1" />
                         <span>{service.price}</span>
                       </div>
-                      <div className="flex items-center text-seafoam-text-dark">
-                        <FiClock className="mr-2" />
+                      <div className="flex items-center text-seafoam-text-dark text-sm">
+                        <FiClock className="mr-1" />
                         <span>{service.duration}</span>
                       </div>
                     </div>
-                    <Link href="/booking" className="btn-primary self-start" data-aos="zoom-in" data-aos-delay="200">
+                    <Link href="/booking" className="btn-primary text-sm w-full text-center" data-aos="zoom-in" data-aos-delay="100">
                       Book this Service
                     </Link>
                   </div>

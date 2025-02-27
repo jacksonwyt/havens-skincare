@@ -178,30 +178,119 @@ const BookingForm: React.FC = () => {
       )}
       
       {/* Booking Steps */}
-      <div className="mb-8">
-        <div className="flex items-center">
-          <div className={`flex items-center justify-center w-10 h-10 rounded-full ${formStep >= 1 ? 'bg-seafoam text-white' : 'bg-gray-200 text-gray-600'}`}>
-            1
+      <div className="mb-8 relative">
+        {/* Background decoration */}
+        <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-100 -z-10"></div>
+        
+        <div className="flex items-center justify-between relative">
+          <div 
+            className={`flex flex-col items-center group ${formStep >= 1 ? 'cursor-default' : 'cursor-not-allowed'}`}
+            onClick={() => formStep > 1 && prevStep()}
+          >
+            <div 
+              className={`flex items-center justify-center w-12 h-12 rounded-full shadow-lg backdrop-blur-sm transition-all duration-500 
+                ${formStep >= 1 
+                  ? 'bg-seafoam/90 text-white ring-4 ring-seafoam/20' 
+                  : 'bg-white/70 text-gray-400'} 
+                ${formStep > 1 ? 'hover:scale-110 cursor-pointer' : ''}`}
+            >
+              <span className="text-lg font-medium">1</span>
+              {formStep === 1 && (
+                <span className="absolute top-0 right-0 -mr-1 -mt-1 bg-white rounded-full w-3 h-3 animate-ping"></span>
+              )}
+            </div>
+            <div className={`mt-2 text-sm font-medium transition-colors duration-300 ${formStep >= 1 ? 'text-seafoam' : 'text-gray-500'}`}>Service</div>
           </div>
-          <div className={`flex-1 h-1 mx-2 ${formStep >= 2 ? 'bg-seafoam' : 'bg-gray-200'}`}></div>
-          <div className={`flex items-center justify-center w-10 h-10 rounded-full ${formStep >= 2 ? 'bg-seafoam text-white' : 'bg-gray-200 text-gray-600'}`}>
-            2
+          
+          <div className={`flex-1 h-0.5 mx-4 transition-all duration-700 
+            ${formStep >= 2 ? 'bg-seafoam' : formStep === 1 ? 'bg-gradient-to-r from-seafoam to-gray-200' : 'bg-gray-200'}`}>
           </div>
-          <div className={`flex-1 h-1 mx-2 ${formStep >= 3 ? 'bg-seafoam' : 'bg-gray-200'}`}></div>
-          <div className={`flex items-center justify-center w-10 h-10 rounded-full ${formStep >= 3 ? 'bg-seafoam text-white' : 'bg-gray-200 text-gray-600'}`}>
-            3
+          
+          <div 
+            className={`flex flex-col items-center group ${formStep >= 2 ? 'cursor-default' : 'cursor-not-allowed'}`}
+          >
+            <div 
+              className={`flex items-center justify-center w-12 h-12 rounded-full shadow-lg backdrop-blur-sm transition-all duration-500 
+                ${formStep >= 2 
+                  ? 'bg-seafoam/90 text-white ring-4 ring-seafoam/20' 
+                  : 'bg-white/70 text-gray-400'} 
+                ${formStep > 2 ? 'hover:scale-110 cursor-pointer' : ''}`}
+            >
+              <span className="text-lg font-medium">2</span>
+              {formStep === 2 && (
+                <span className="absolute top-0 right-0 -mr-1 -mt-1 bg-white rounded-full w-3 h-3 animate-ping"></span>
+              )}
+            </div>
+            <div className={`mt-2 text-sm font-medium transition-colors duration-300 ${formStep >= 2 ? 'text-seafoam' : 'text-gray-500'}`}>Details</div>
           </div>
-        </div>
-        <div className="flex justify-between mt-2 text-sm text-gray-600">
-          <div className="text-center w-10">Service</div>
-          <div className="text-center w-10">Details</div>
-          <div className="text-center w-10">Confirm</div>
+          
+          <div className={`flex-1 h-0.5 mx-4 transition-all duration-700 
+            ${formStep >= 3 ? 'bg-seafoam' : formStep === 2 ? 'bg-gradient-to-r from-seafoam to-gray-200' : 'bg-gray-200'}`}>
+          </div>
+          
+          <div className="flex flex-col items-center">
+            <div 
+              className={`flex items-center justify-center w-12 h-12 rounded-full shadow-lg backdrop-blur-sm transition-all duration-500 
+                ${formStep >= 3 
+                  ? 'bg-seafoam/90 text-white ring-4 ring-seafoam/20' 
+                  : 'bg-white/70 text-gray-400'}`}
+            >
+              <span className="text-lg font-medium">3</span>
+              {formStep === 3 && (
+                <span className="absolute top-0 right-0 -mr-1 -mt-1 bg-white rounded-full w-3 h-3 animate-ping"></span>
+              )}
+            </div>
+            <div className={`mt-2 text-sm font-medium transition-colors duration-300 ${formStep >= 3 ? 'text-seafoam' : 'text-gray-500'}`}>Confirm</div>
+          </div>
         </div>
       </div>
       
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Step 1: Select Service & Date */}
+        {/* Step 1: Select Service */}
         {formStep === 1 && (
+          <div className="rounded-lg glass p-6 border border-white/20 transform transition-all duration-500 shadow-lg">
+            <h3 className="text-xl font-semibold mb-6 text-gray-800">Select a Service</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {services.map((service) => (
+                <div
+                  key={service.id}
+                  className={`p-4 rounded-lg border transition-all duration-300 cursor-pointer relative overflow-hidden group
+                    ${formData.service === service.id 
+                      ? 'border-seafoam bg-seafoam/5 shadow-md' 
+                      : 'border-gray-200 bg-white/70 hover:border-seafoam/50 hover:bg-white/90'}`}
+                  onClick={() => handleChange({ target: { name: 'service', value: service.id } } as any)}
+                >
+                  <div className={`absolute inset-0 bg-seafoam/5 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ${formData.service === service.id ? 'scale-x-100' : ''}`}></div>
+                  <div className="relative">
+                    <div className="flex justify-between items-start mb-2">
+                      <h4 className="font-medium text-gray-900">{service.name}</h4>
+                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all duration-300 ${formData.service === service.id ? 'border-seafoam bg-seafoam' : 'border-gray-300'}`}>
+                        {formData.service === service.id && <div className="w-2 h-2 rounded-full bg-white"></div>}
+                      </div>
+                    </div>
+                    <div className="text-sm text-gray-600 mb-1">{service.duration}</div>
+                    <div className="text-seafoam font-semibold">{service.price}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8 flex justify-end">
+              <button
+                onClick={formData.service ? nextStep : undefined}
+                className={`px-6 py-2 rounded-md transition-all duration-300 ${
+                  formData.service 
+                    ? 'bg-seafoam/90 text-white hover:bg-seafoam shadow-md hover:shadow-lg' 
+                    : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                }`}
+                disabled={!formData.service}
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        )}
+        
+        {/* Step 2: Personal Information */}
           <div className="space-y-6">
             <div>
               <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">

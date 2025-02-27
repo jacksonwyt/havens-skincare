@@ -9,10 +9,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'seafoam': '#FFCFEF',
-        'sand': '#0A97B0',
-        'soft-blue': '#0A5EB0',
-        'light-gray': '#2A3335',
+        'seafoam': '#EBC7E6',
+        'sand': '#3EA8B9',
+        'soft-blue': '#4D84C4',
+        'light-gray': '#4D5557',
+        'haven-blue': '#0c5cb4',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
