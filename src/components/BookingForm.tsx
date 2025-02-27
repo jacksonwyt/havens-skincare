@@ -141,7 +141,7 @@ const BookingForm: React.FC = () => {
       // Go back to step 1
       setFormStep(1);
       
-    } catch (error) {
+    } catch {
       // Show error message
       setFormStatus({
         message: 'There was an error booking your appointment. Please try again or contact us directly.',
@@ -248,49 +248,6 @@ const BookingForm: React.FC = () => {
       <form onSubmit={handleSubmit} className="space-y-6">
         {/* Step 1: Select Service */}
         {formStep === 1 && (
-          <div className="rounded-lg glass p-6 border border-white/20 transform transition-all duration-500 shadow-lg">
-            <h3 className="text-xl font-semibold mb-6 text-gray-800">Select a Service</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {services.map((service) => (
-                <div
-                  key={service.id}
-                  className={`p-4 rounded-lg border transition-all duration-300 cursor-pointer relative overflow-hidden group
-                    ${formData.service === service.id 
-                      ? 'border-seafoam bg-seafoam/5 shadow-md' 
-                      : 'border-gray-200 bg-white/70 hover:border-seafoam/50 hover:bg-white/90'}`}
-                  onClick={() => handleChange({ target: { name: 'service', value: service.id } } as any)}
-                >
-                  <div className={`absolute inset-0 bg-seafoam/5 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ${formData.service === service.id ? 'scale-x-100' : ''}`}></div>
-                  <div className="relative">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-medium text-gray-900">{service.name}</h4>
-                      <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all duration-300 ${formData.service === service.id ? 'border-seafoam bg-seafoam' : 'border-gray-300'}`}>
-                        {formData.service === service.id && <div className="w-2 h-2 rounded-full bg-white"></div>}
-                      </div>
-                    </div>
-                    <div className="text-sm text-gray-600 mb-1">{service.duration}</div>
-                    <div className="text-seafoam font-semibold">{service.price}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="mt-8 flex justify-end">
-              <button
-                onClick={formData.service ? nextStep : undefined}
-                className={`px-6 py-2 rounded-md transition-all duration-300 ${
-                  formData.service 
-                    ? 'bg-seafoam/90 text-white hover:bg-seafoam shadow-md hover:shadow-lg' 
-                    : 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                }`}
-                disabled={!formData.service}
-              >
-                Continue
-              </button>
-            </div>
-          </div>
-        )}
-        
-        {/* Step 2: Personal Information */}
           <div className="space-y-6">
             <div>
               <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
