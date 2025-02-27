@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Haven's Skincare - Esthetician Website
 
-## Getting Started
+A professional website for an esthetician business located in Newport Beach, California. This website embodies a California coast vibe and includes the following pages: a landing page, an about page, a contact page, a services page, and a booking feature.
 
-First, run the development server:
+## Technologies Used
 
+- **Frontend Framework**: Next.js with React
+- **Styling**: Tailwind CSS
+- **UI Components**: React Icons
+- **Form Management**: React Hook Form (simulated)
+- **Date/Time Picking**: React DatePicker
+
+## Features
+
+- Responsive design for all devices (mobile, tablet, desktop)
+- California coast-inspired design with relaxing color palette
+- Interactive booking system with availability management
+- Comprehensive service listings with detailed information
+- Contact form with validation
+- Testimonials showcase
+- Location information with map integration (placeholder)
+
+## Setup Instructions
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd havens-skincare
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn More
+## Image Placeholders
 
-To learn more about Next.js, take a look at the following resources:
+This project requires several images that should be placed in the `/public/images/` directory. Due to copyright restrictions and size limitations, these images are not included in the repository.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For testing, you'll need to add the following images:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/public/images/hero-beach.jpg` - Hero image of Newport Beach coastline
+- `/public/images/esthetician.jpg` - Professional image of an esthetician
+- `/public/images/owner.jpg` - Professional headshot of the business owner
+- `/public/images/treatment-room.jpg` - Image of the treatment room
+- `/public/images/service-*.jpg` - Images for each service (facial, cleansing, anti-aging, coastal, peel, microdermabrasion, led, brow, lip, face-wax)
+- `/public/images/package-*.jpg` - Images for packages (retreat, bridal, membership)
+- `/public/images/testimonial-*.jpg` - Images for testimonials (1, 2, 3, 4, booking)
 
-## Deploy on Vercel
+You can use stock photos or placeholder images for development purposes.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This website can be easily deployed on Vercel, Netlify, or any other platform that supports Next.js.
+
+For production deployment:
+
+```bash
+npm run build
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Credits
+
+- Design and Development: [Your Name]
+- Icons: [React Icons](https://react-icons.github.io/react-icons/)
