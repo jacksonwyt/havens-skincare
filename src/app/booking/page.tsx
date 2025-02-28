@@ -50,7 +50,7 @@ export default function Booking() {
                   <div data-aos="fade-up" data-aos-delay="400">
                     <h4 className="font-semibold text-gray-800 mb-2">Cancellation Policy</h4>
                     <p className="text-gray-600">
-                      We require 24 hours' notice for cancellations or reschedules. Late cancellations may incur a fee of 50% of the service price.
+                      We require 24 hours&apos; notice for cancellations or reschedules. Late cancellations may incur a fee of 50% of the service price.
                     </p>
                   </div>
                   
@@ -81,7 +81,7 @@ export default function Booking() {
                       </div>
                       <div>
                         <p className="font-medium text-gray-800">
-                          "We look forward to helping you achieve your skincare goals and providing a relaxing, rejuvenating experience."
+                          &quot;We look forward to helping you achieve your skincare goals and providing a relaxing, rejuvenating experience.&quot;
                         </p>
                         <p className="text-seafoam-text-dark text-sm mt-1">- Heather Havens, Founder</p>
                       </div>
@@ -227,7 +227,7 @@ export default function Booking() {
                 </svg>
               </div>
               <blockquote className="text-xl md:text-2xl font-medium text-gray-800 mb-8">
-                "My appointment at Haven's Skincare was the most relaxing and effective facial treatment I've ever experienced. The esthetician took the time to understand my skin concerns and tailored the entire session to my needs. I've been booking monthly ever since!"
+                &quot;My appointment at Haven&apos;s Skincare was the most relaxing and effective facial treatment I&apos;ve ever experienced. The esthetician took the time to understand my skin concerns and tailored the entire session to my needs. I&apos;ve been booking monthly ever since!&quot;
               </blockquote>
               <div className="flex justify-center items-center">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">

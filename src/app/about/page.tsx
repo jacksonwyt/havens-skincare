@@ -14,9 +14,9 @@ export default function About() {
       <section className="relative py-20 bg-soft-blue bg-opacity-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center" data-aos="fade-up" data-aos-duration="1000">
-            <h1 className="text-4xl font-bold text-gray-800 mb-6">About Haven&#39;s Skincare</h1>
+            <h1 className="text-4xl font-bold text-gray-800 mb-6">About Havens Skincare</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Bringing coastal tranquility and skin rejuvenation to Newport Beach since 2014.
+              Bringing tranquility and skin rejuvenation to Newport Beach.
             </p>
           </div>
         </div>
@@ -73,13 +73,13 @@ export default function About() {
             <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
             <div className="w-24 h-1 bg-seafoam mx-auto"></div>
           </div>
-          
+         
           <div className="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
             <p className="text-xl text-gray-700 italic mb-8">
-              "To enhance your natural beauty with personalized, coastal-inspired treatments that rejuvenate both skin and spirit."
+              &quot;To enhance your natural beauty with personalized, coastal-inspired treatments that rejuvenate both skin and spirit.&quot;
             </p>
             <p className="text-gray-600 mb-8">
-              At Haven&#39;s Skincare, we&#39;re dedicated to providing exceptional skincare services in a peaceful, luxurious environment. We combine the latest skincare innovations with the natural healing elements of the California coast to deliver treatments that leave you feeling refreshed, renewed, and radiant.
+              At Havens Skincare, we&#39;re dedicated to providing exceptional skincare services in a peaceful, luxurious environment. We combine the latest skincare innovations with the natural healing elements of the California coast to deliver treatments that leave you feeling refreshed, renewed, and radiant.
             </p>
             <div className="inline-flex items-center text-seafoam-text-dark" data-aos="zoom-in" data-aos-delay="400">
               <FiHeart className="mr-2" /> Personalized Care For Every Client
@@ -92,7 +92,7 @@ export default function About() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">The Haven Approach</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">The Havens Approach</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               Our philosophy combines scientific expertise with the natural healing elements of the California coast.
             </p>
@@ -117,7 +117,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Premium Products</h3>
               <p className="text-gray-600">
-                We use only the highest quality, professionally-formulated products with proven results and ocean-inspired ingredients.
+                We use only the highest quality, professionally-formulated products with proven results.
               </p>
             </div>
             
@@ -128,7 +128,7 @@ export default function About() {
               </div>
               <h3 className="text-xl font-bold text-gray-800 mb-4">Coastal Serenity</h3>
               <p className="text-gray-600">
-                Our tranquil environment is designed to soothe the senses, inspired by the peaceful beauty of the California coastline.
+                Our tranquil environment is designed to soothe the senses, inspired by the beauty of the California coast.
               </p>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function About() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-8 md:mb-0 md:mr-8">
               <h2 className="text-3xl font-bold text-white mb-4 hero-text-shadow">
-                Ready to Experience the Haven Difference?
+                Ready to Experience the Havens Difference?
               </h2>
               <p className="text-white text-lg max-w-xl hero-text-shadow">
                 Book your consultation today and begin your journey to radiant, healthy skin.

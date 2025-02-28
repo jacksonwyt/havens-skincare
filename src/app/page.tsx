@@ -190,10 +190,10 @@ export default function Home() {
           <div className="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
             <h2 className="text-3xl font-bold text-white mb-4">What Our Clients Say</h2>
             <p className="text-white">
-              Discover why our clients trust Haven&apos;s Skincare for their skincare journey.
+              Discover why our clients trust Havens Skincare for their skincare journey.
             </p>
           </div>
-          
+         
           {/* Testimonial Slider Component */}
           <div data-aos="fade-up" data-aos-delay="200">
             <TestimonialSlider />
@@ -211,7 +211,7 @@ export default function Home() {
           <div className="relative max-w-3xl mx-auto text-center" data-aos="fade-up">
             <h2 className="text-3xl font-bold mb-6">Ready for a Skincare Transformation?</h2>
             <p className="text-white/90 mb-8 text-lg">
-              Book your appointment today and experience the perfect blend of science and relaxation at Haven&apos;s Skincare.
+              Book your appointment today and experience the perfect blend of science and relaxation at Havens Skincare.
             </p>
             <Link 
               href="/booking" 

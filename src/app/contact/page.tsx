@@ -14,9 +14,9 @@ export default function Contact() {
       <section className="relative py-20 bg-soft-blue bg-opacity-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center" data-aos="fade-up" data-aos-duration="1000">
-            <h1 className="text-4xl font-bold text-gray-800 mb-6">Contact Us</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Have questions or ready to book? Get in touch with our team at Haven&#39;s Skincare.
+            <h1 className="text-4xl font-bold text-gray-100 mb-6">Contact Us</h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Have questions or ready to book? Get in touch with our team at Havens Skincare.
             </p>
           </div>
         </div>
@@ -52,7 +52,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-1">Phone</h3>
                     <p className="text-gray-600">
-                      <a href="tel:9495551234" className="hover:text-seafoam transition duration-300">(949) 555-1234</a>
+                      <a href="tel:9493753632" className="hover:text-seafoam transition duration-300">(949) 375-3632</a>
                     </p>
                   </div>
                 </div>
@@ -118,7 +118,7 @@ export default function Contact() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-8 md:mb-0 md:mr-8">
               <h2 className="text-3xl font-bold text-white mb-4 hero-text-shadow">
-                Ready for Your Coastal Skincare Experience?
+                Ready for a one-of-a-kind Skincare Experience?
               </h2>
               <p className="text-white text-lg max-w-xl hero-text-shadow">
                 Book your appointment today and begin your journey to radiant skin.

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { FiClock, FiDollarSign, FiPlus, FiMinus } from 'react-icons/fi';
+import { FiClock, FiDollarSign, FiPlus } from 'react-icons/fi';
 
 export const metadata = {
   title: "Services | Haven's Skincare - Newport Beach Esthetician",
@@ -14,38 +14,6 @@ const services = [
     name: 'Facial Treatments',
     description: 'Our signature facial treatments are designed to address your specific skin concerns while providing deep relaxation.',
     items: [
-      {
-        id: 'hydrating-facial',
-        name: 'Hydrating Facial',
-        description: 'Restore moisture and radiance with our signature hydrating facial, perfect for dry or dehydrated skin. This treatment includes gentle cleansing, exfoliation, a hydrating mask, and a relaxing facial massage.',
-        price: '$120',
-        duration: '60 min',
-        image: '/images/service-facial.jpg',
-      },
-      {
-        id: 'deep-cleansing-facial',
-        name: 'Deep Cleansing Facial',
-        description: 'A thorough treatment designed to purify congested skin and target breakouts. Includes deep cleansing, extractions, a purifying mask, and balancing hydration.',
-        price: '$135',
-        duration: '75 min',
-        image: '/images/service-cleansing.jpg',
-      },
-      {
-        id: 'anti-aging-facial',
-        name: 'Anti-Aging Facial',
-        description: 'Combat signs of aging with this rejuvenating treatment that firms, tightens, and brightens the skin. Features premium peptide-rich products and specialized massage techniques.',
-        price: '$150',
-        duration: '75 min',
-        image: '/images/service-anti-aging.jpg',
-      },
-      {
-        id: 'coastal-glow-facial',
-        name: 'Coastal Glow Facial',
-        description: 'Our signature facial inspired by the California coast. This treatment uses marine-derived ingredients to restore your skin\'s natural radiance and vitality.',
-        price: '$165',
-        duration: '90 min',
-        image: '/images/service-coastal.jpg',
-      },
       {
         id: 'teen-clarifying-facial',
         name: 'Teen Clarifying Facial',
@@ -61,37 +29,6 @@ const services = [
         price: '$225',
         duration: '60 min',
         image: '/images/service-microdermabrasion.jpg',
-      }
-    ]
-  },
-  {
-    id: 'treatments',
-    name: 'Advanced Treatments',
-    description: 'Target specific skin concerns with our results-driven advanced treatments.',
-    items: [
-      {
-        id: 'chemical-peel',
-        name: 'Chemical Peel',
-        description: 'Reveal fresher, younger-looking skin with our customized chemical peel treatments for all skin types. Reduces fine lines, sun damage, and improves skin texture.',
-        price: '$150',
-        duration: '45 min',
-        image: '/images/service-peel.jpg',
-      },
-      {
-        id: 'microdermabrasion',
-        name: 'Microdermabrasion',
-        description: 'Gently exfoliate and rejuvenate your skin with our advanced microdermabrasion treatment, reducing fine lines and improving texture.',
-        price: '$135',
-        duration: '50 min',
-        image: '/images/service-microdermabrasion.jpg',
-      },
-      {
-        id: 'led-therapy',
-        name: 'LED Light Therapy',
-        description: 'Stimulate collagen production and target specific skin concerns with our advanced LED light therapy. Can be added to any facial treatment or booked as a standalone service.',
-        price: '$75',
-        duration: '30 min',
-        image: '/images/service-led.jpg',
       }
     ]
   },
@@ -276,37 +213,6 @@ const services = [
         image: '/images/service-face-wax.jpg',
       }
     ]
-  },
-  {
-    id: 'packages',
-    name: 'Treatment Packages',
-    description: 'Save with our specially designed packages that combine our most popular services.',
-    items: [
-      {
-        id: 'coastal-retreat',
-        name: 'Coastal Retreat Package',
-        description: 'The ultimate skin rejuvenation experience: Coastal Glow Facial, LED Light Therapy, and a hydrating hand treatment.',
-        price: '$225',
-        duration: '120 min',
-        image: '/images/package-retreat.jpg',
-      },
-      {
-        id: 'bridal-glow',
-        name: 'Bridal Glow Package',
-        description: 'Prepare for your special day with a series of 3 customized facials, designed to be scheduled in the months leading up to your wedding.',
-        price: '$325',
-        duration: '3 sessions',
-        image: '/images/package-bridal.jpg',
-      },
-      {
-        id: 'monthly-membership',
-        name: 'Monthly Membership',
-        description: 'Join our membership program and receive one signature facial per month, plus 15% off all products and additional services.',
-        price: '$95/month',
-        duration: 'Ongoing',
-        image: '/images/package-membership.jpg',
-      }
-    ]
   }
 ];
 
@@ -326,7 +232,7 @@ export default function Services() {
       </section>
 
       {/* Service Categories */}
-      {services.map((category, categoryIndex) => (
+      {services.map((category) => (
         <section 
           key={category.id} 
           id={category.id}
@@ -401,7 +307,7 @@ export default function Services() {
                   <FiPlus className="text-seafoam" />
                 </summary>
                 <div className="mt-4 text-gray-600">
-                  <p>For the best results, arrive with a clean face (no makeup). Avoid sun exposure and exfoliating products 48 hours before your treatment. Men should shave at least 2 hours before their facial. Stay hydrated and let us know about any skin sensitivities or medications you're taking.</p>
+                  <p>For the best results, arrive with a clean face (no makeup). Avoid sun exposure and exfoliating products 48 hours before your treatment. Men should shave at least 2 hours before their facial. Stay hydrated and let us know about any skin sensitivities or medications you&apos;re taking.</p>
                 </div>
               </details>
 
@@ -411,7 +317,7 @@ export default function Services() {
                   <FiPlus className="text-seafoam" />
                 </summary>
                 <div className="mt-4 text-gray-600">
-                  <p>For optimal results, we recommend a facial every 4-6 weeks, which aligns with your skin's natural cell turnover cycle. However, this can vary based on your skin type, concerns, and goals. Your esthetician will recommend a personalized treatment schedule during your consultation.</p>
+                  <p>For optimal results, we recommend a facial every 4-6 weeks, which aligns with your skin&apos;s natural cell turnover cycle. However, this can vary based on your skin type, concerns, and goals. Your esthetician will recommend a personalized treatment schedule during your consultation.</p>
                 </div>
               </details>
 
@@ -421,7 +327,7 @@ export default function Services() {
                   <FiPlus className="text-seafoam" />
                 </summary>
                 <div className="mt-4 text-gray-600">
-                  <p>Post-peel reactions vary depending on the type and strength of your peel. You may experience redness, sensitivity, and peeling for 3-7 days. It's crucial to avoid sun exposure, use gentle products, and apply SPF daily. Your esthetician will provide detailed aftercare instructions specifically for your treatment.</p>
+                  <p>Post-peel reactions vary depending on the type and strength of your peel. You may experience redness, sensitivity, and peeling for 3-7 days. It&apos;s crucial to avoid sun exposure, use gentle products, and apply SPF daily. Your esthetician will provide detailed aftercare instructions specifically for your treatment.</p>
                 </div>
               </details>
             </div>
@@ -438,7 +344,7 @@ export default function Services() {
                 Ready to Book Your Treatment?
               </h2>
               <p className="text-white text-lg max-w-xl hero-text-shadow">
-                Schedule your appointment today and experience the Haven's difference.
+                Schedule your appointment today and experience the Haven&apos;s difference.
               </p>
             </div>
             <div data-aos="zoom-in" data-aos-delay="300">
