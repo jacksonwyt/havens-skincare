@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FiCheck } from "react-icons/fi";
+import { FiCheck, FiCalendar, FiInfo, FiLayers } from "react-icons/fi";
 
-// Components
-import TestimonialSlider from "@/components/TestimonialSlider";
+
 
 export default function Home() {
   return (
@@ -41,28 +40,28 @@ export default function Home() {
             {/* Services button */}
             <Link 
               href="/services" 
-              className="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white bg-haven-blue/70 backdrop-blur-md rounded-md shadow-lg group border border-white/30 transform transition-all duration-300 hover:bg-haven-blue/80 hover:shadow-xl"
+              className="btn-primary btn-with-icon"
             >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-white/5 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              <span className="relative group-hover:translate-y-[-2px] transition-transform duration-300">Services</span>
+              <FiLayers className="mr-2" />
+              Services
             </Link>
             
             {/* About button */}
             <Link 
               href="/about" 
-              className="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white bg-haven-blue/70 backdrop-blur-md rounded-md shadow-lg group border border-white/30 transform transition-all duration-300 hover:bg-haven-blue/80 hover:shadow-xl"
+              className="btn-secondary btn-with-icon"
             >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-white/5 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              <span className="relative group-hover:translate-y-[-2px] transition-transform duration-300">About</span>
+              <FiInfo className="mr-2" />
+              About
             </Link>
             
             {/* Book an Appointment button */}
             <Link 
               href="/booking" 
-              className="relative inline-flex items-center justify-center px-8 py-3 overflow-hidden font-medium text-white bg-haven-blue/70 backdrop-blur-md rounded-md shadow-lg group border border-white/30 transform transition-all duration-300 hover:bg-haven-blue/80 hover:shadow-xl"
+              className="btn-seafoam btn-with-icon"
             >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-white/5 to-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              <span className="relative group-hover:translate-y-[-2px] transition-transform duration-300">Book an Appointment</span>
+              <FiCalendar className="mr-2" />
+              Book an Appointment
             </Link>
           </div>
         </div>
@@ -72,7 +71,7 @@ export default function Home() {
       <section className="py-16 bg-haven-blue/15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-8 md:mb-0 md:pr-12" data-aos="fade-right" data-aos-duration="800">
+            <div className="md:w-2/6 mb-8 md:mb-0 md:pr-12" data-aos="fade-right" data-aos-duration="800">
               <div className="relative rounded-lg overflow-hidden shadow-xl h-96">
                 <Image
                   src="/images/owner1.jpeg"
@@ -82,12 +81,12 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="md:w-1/2" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+            <div className="md:w-2/3" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Experience the Haven Difference
+                Experience the Havens Difference
               </h2>
               <p className="text-white mb-6">
-                At Haven&apos;s Skincare, we bring the tranquility of the California coast into every treatment. 
+                At Havens Skincare, we bring the tranquility of the California coast into every treatment. 
                 Our Newport Beach studio offers personalized skin care services in a calming, luxurious environment.
               </p>
               <ul className="space-y-3 mb-8">
@@ -97,7 +96,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start" data-aos="fade-up" data-aos-duration="400" data-aos-delay="200">
                   <FiCheck className="text-haven-blue mt-1 mr-2 flex-shrink-0" />
-                  <span className="text-white">Premium, marine-based skincare products</span>
+                  <span className="text-white">Premium skincare products</span>
                 </li>
                 <li className="flex items-start" data-aos="fade-up" data-aos-duration="400" data-aos-delay="300">
                   <FiCheck className="text-haven-blue mt-1 mr-2 flex-shrink-0" />
@@ -108,7 +107,8 @@ export default function Home() {
                   <span className="text-white">Over 10 years of skincare expertise</span>
                 </li>
               </ul>
-              <Link href="/about" className="btn-primary" data-aos="fade-up" data-aos-delay="500">
+              <Link href="/about" className="btn-primary btn-with-icon" data-aos="fade-up" data-aos-delay="500">
+                <FiInfo className="mr-2" />
                 Learn About Our Story
               </Link>
             </div>
@@ -162,7 +162,7 @@ export default function Home() {
             {/* Service 3 */}
             <div className="bg-haven-blue/10 backdrop-blur-sm rounded-lg p-6 border border-haven-blue/10 shadow-lg transform transition-all duration-500 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
               <div className="bg-white/60 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
-                <Image src="/images/microderm-icon.svg" alt="Microdermabrasion" width={32} height={32} />
+                <Image src="/images/microderm-icon.png" alt="Microdermabrasion" width={32} height={32} />
               </div>
               <h3 className="text-xl font-bold text-gray-800 text-center mb-3">Microdermabrasion</h3>
               <p className="text-gray-600 text-center mb-4">
@@ -177,29 +177,15 @@ export default function Home() {
           </div>
           
           <div className="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
-            <Link href="/services" className="btn-primary">
+            <Link href="/services" className="btn-primary btn-with-icon">
+              <FiLayers className="mr-2" />
               View All Services
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-16 bg-haven-blue/15">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
-            <h2 className="text-3xl font-bold text-white mb-4">What Our Clients Say</h2>
-            <p className="text-white">
-              Discover why our clients trust Havens Skincare for their skincare journey.
-            </p>
-          </div>
-         
-          {/* Testimonial Slider Component */}
-          <div data-aos="fade-up" data-aos-delay="200">
-            <TestimonialSlider />
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA Section */}
       <section className="py-16 bg-haven-blue backdrop-blur-md text-white">
@@ -215,8 +201,9 @@ export default function Home() {
             </p>
             <Link 
               href="/booking" 
-              className="inline-flex items-center justify-center px-8 py-3 bg-white text-haven-blue font-medium rounded-md shadow-lg transform transition-all duration-300 hover:bg-white/90 hover:-translate-y-1 hover:shadow-xl"
+              className="btn-secondary btn-with-icon"
             >
+              <FiCalendar className="mr-2" />
               Book Your Appointment
             </Link>
           </div>

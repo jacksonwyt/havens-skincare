@@ -35,7 +35,7 @@ export default function Contact() {
               
               <div className="space-y-6 mb-8">
                 <div className="flex items-start" data-aos="fade-up" data-aos-delay="100">
-                  <div className="bg-seafoam bg-opacity-10 p-3 rounded-full mr-4">
+                  <div className="bg-seafoam bg-opacity-81 p-3 rounded-full mr-4">
                     <FiMapPin className="text-seafoam-text-dark w-6 h-6" />
                   </div>
                   <div>
@@ -46,7 +46,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="flex items-start" data-aos="fade-up" data-aos-delay="200">
-                  <div className="bg-seafoam bg-opacity-10 p-3 rounded-full mr-4">
+                  <div className="bg-seafoam bg-opacity-81 p-3 rounded-full mr-4">
                     <FiPhone className="text-seafoam-text-dark w-6 h-6" />
                   </div>
                   <div>
@@ -58,7 +58,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="flex items-start" data-aos="fade-up" data-aos-delay="300">
-                  <div className="bg-seafoam bg-opacity-10 p-3 rounded-full mr-4">
+                  <div className="bg-seafoam bg-opacity-81 p-3 rounded-full mr-4">
                     <FiMail className="text-seafoam-text-dark w-6 h-6" />
                   </div>
                   <div>
@@ -70,7 +70,7 @@ export default function Contact() {
                 </div>
                 
                 <div className="flex items-start" data-aos="fade-up" data-aos-delay="400">
-                  <div className="bg-seafoam bg-opacity-10 p-3 rounded-full mr-4">
+                  <div className="bg-seafoam bg-opacity-81 p-3 rounded-full mr-4">
                     <FiClock className="text-seafoam-text-dark w-6 h-6" />
                   </div>
                   <div>
@@ -125,7 +125,7 @@ export default function Contact() {
               </p>
             </div>
             <div data-aos="zoom-in" data-aos-delay="300">
-              <Link href="/booking" className="bg-white text-seafoam-text-dark px-8 py-3 rounded-md hover:bg-gray-100 transition duration-300 inline-block font-medium">
+              <Link href="/booking" className="bg-pink-100 text-gray-500 px-8 py-3 rounded-md hover:bg-gray-100 transition duration-300 inline-block font-medium">
                 Book Your Appointment
               </Link>
             </div>

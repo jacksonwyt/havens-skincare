@@ -13,8 +13,8 @@ export default function Booking() {
       <section className="relative py-20 bg-soft-blue bg-opacity-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center" data-aos="fade-up" data-aos-duration="1000">
-            <h1 className="text-4xl font-bold text-gray-800 mb-6">Book an Appointment</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h1 className="text-4xl font-bold text-gray-100 mb-6">Book an Appointment</h1>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Schedule your treatment and take the first step towards rejuvenated, radiant skin.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function Booking() {
                       <div className="mr-4">
                         <div className="h-12 w-12 rounded-full overflow-hidden">
                           <Image
-                            src="/images/owner-avatar.jpg"
+                            src="/images/owner-avatar1.png"
                             alt="Owner Avatar"
                             width={48}
                             height={48}
@@ -94,87 +94,12 @@ export default function Booking() {
         </div>
       </section>
 
-      {/* Services Preview */}
-      <section className="py-16 bg-soft-blue bg-opacity-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Popular Treatments</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
-              Not sure which treatment to book? Here are some of our most requested services.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Service 1 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-              <div className="relative h-56">
-                <Image
-                  src="/images/service-facial.jpg"
-                  alt="Hydrating Facial"
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Hydrating Facial</h3>
-                <p className="text-gray-600 mb-4">
-                  Restore moisture and radiance with our signature hydrating facial.
-                </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-seafoam-text-dark font-medium">$120 | 60 min</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Service 2 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-              <div className="relative h-56">
-                <Image
-                  src="/images/service-peel.jpg"
-                  alt="Chemical Peel"
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Chemical Peel</h3>
-                <p className="text-gray-600 mb-4">
-                  Reveal fresher, younger-looking skin with our customized peel treatments.
-                </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-seafoam-text-dark font-medium">$150 | 45 min</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Service 3 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-              <div className="relative h-56">
-                <Image
-                  src="/images/service-microdermabrasion.jpg"
-                  alt="Microdermabrasion"
-                  fill
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Microdermabrasion</h3>
-                <p className="text-gray-600 mb-4">
-                  Gently exfoliate and rejuvenate your skin with this advanced treatment.
-                </p>
-                <div className="flex justify-between items-center">
-                  <span className="text-seafoam-text-dark font-medium">$135 | 50 min</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Benefits Section */}
       <section className="py-16 bg-seafoam bg-opacity-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-12 text-center">Why Book With Us</h2>
+          <h2 className="text-3xl font-bold text-gray-100 mb-12 text-center">Why Book With Us</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-sm text-center">
@@ -216,37 +141,7 @@ export default function Booking() {
         </div>
       </section>
       
-      {/* Testimonial */}
-      <section className="py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-soft-blue bg-opacity-10 p-8 md:p-12 rounded-xl">
-            <div className="flex flex-col items-center text-center">
-              <div className="mb-6">
-                <svg className="h-12 w-12 text-seafoam" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h10zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z" />
-                </svg>
-              </div>
-              <blockquote className="text-xl md:text-2xl font-medium text-gray-800 mb-8">
-                &quot;My appointment at Haven&apos;s Skincare was the most relaxing and effective facial treatment I&apos;ve ever experienced. The esthetician took the time to understand my skin concerns and tailored the entire session to my needs. I&apos;ve been booking monthly ever since!&quot;
-              </blockquote>
-              <div className="flex justify-center items-center">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  <Image
-                    src="/images/testimonial-booking.jpg"
-                    alt="Client"
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
-                </div>
-                <div className="text-left">
-                  <p className="font-semibold text-gray-800">Jennifer L.</p>
-                  <p className="text-gray-600 text-sm">Newport Beach</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
     </div>
   );
 } 

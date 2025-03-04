@@ -187,7 +187,7 @@ const ContactForm: React.FC = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full flex items-center justify-center bg-seafoam text-white py-3 px-6 rounded-md hover:bg-opacity-90 transition duration-300 ${
+          className={`w-full btn-primary btn-with-icon ${
             isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
           }`}
         >

@@ -464,19 +464,25 @@ const BookingForm: React.FC = () => {
               <button
                 type="button"
                 onClick={prevStep}
-                className="bg-white text-gray-700 border border-gray-300 py-2 px-6 rounded-md hover:bg-gray-50 transition duration-300"
+                className="btn-secondary btn-with-icon"
               >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
                 Back
               </button>
               <button
                 type="button"
                 onClick={nextStep}
                 disabled={!validateStep2()}
-                className={`bg-seafoam text-white py-2 px-6 rounded-md hover:bg-opacity-90 transition duration-300 ${
+                className={`btn-seafoam btn-with-icon ${
                   !validateStep2() ? 'opacity-50 cursor-not-allowed' : ''
                 }`}
               >
                 Continue
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
               </button>
             </div>
           </div>
@@ -563,14 +569,17 @@ const BookingForm: React.FC = () => {
               <button
                 type="button"
                 onClick={prevStep}
-                className="bg-white text-gray-700 border border-gray-300 py-2 px-6 rounded-md hover:bg-gray-50 transition duration-300"
+                className="btn-secondary btn-with-icon"
               >
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
                 Back
               </button>
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`bg-seafoam text-white py-2 px-6 rounded-md hover:bg-opacity-90 transition duration-300 ${
+                className={`btn-seafoam btn-with-icon ${
                   isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >
@@ -583,7 +592,12 @@ const BookingForm: React.FC = () => {
                     Processing...
                   </>
                 ) : (
-                  'Confirm Appointment'
+                  <>
+                    Confirm Appointment
+                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12L10 17L19 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </>
                 )}
               </button>
             </div>
