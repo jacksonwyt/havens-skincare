@@ -57,7 +57,7 @@ const ContactForm: React.FC = () => {
         isError: false,
       });
       
-    } catch (error) {
+    } catch {
       // Show error message
       setFormStatus({
         message: 'There was an error sending your message. Please try again.',

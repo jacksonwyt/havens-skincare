@@ -68,7 +68,7 @@ const Footer = () => {
                   <FiMail className="w-4 h-4 text-white" />
                 </div>
                 <div className="mt-1">
-                  <span className="footer-link">info@havensskincare.com</span>
+                  <span className="footer-link">halibrando@yahoo.com</span>
                 </div>
               </li>
               <li className="flex items-start">

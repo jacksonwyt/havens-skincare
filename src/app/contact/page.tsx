@@ -64,7 +64,7 @@ export default function Contact() {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-1">Email</h3>
                     <p className="text-gray-600">
-                      <a href="mailto:info@havensskincare.com" className="hover:text-seafoam transition duration-300">info@havensskincare.com</a>
+                      <a href="mailto:halibrando@yahoo.com" className="hover:text-seafoam transition duration-300">halibrando@yahoo.com</a>
                     </p>
                   </div>
                 </div>
