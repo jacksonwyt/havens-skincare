@@ -17,7 +17,7 @@ const services = [
       {
         id: 'epicuren-signature-facial',
         name: 'Epicuren Signature Facial',
-        description: 'Indulge in Epicuren&apos;s most celebrated facial, designed to lift, tone, and revitalize your skin. This enzymatic treatment uses Epicuren&apos;s Metadermabolic Enzyme to stimulate cell turnover, improve elasticity, and leave your skin visibly firmer and refreshed. Perfect for all skin types looking for a vibrant, youthful glow.',
+        description: 'Indulge in Epicurens most celebrated facial, designed to lift, tone, and revitalize your skin. This enzymatic treatment uses Epicurens Metadermabolic Enzyme to stimulate cell turnover, improve elasticity, and leave your skin visibly firmer and refreshed. Perfect for all skin types looking for a vibrant, youthful glow.',
         price: '$150',
         duration: '60 min',
         image: '/images/products2.png',
@@ -25,7 +25,7 @@ const services = [
       {
         id: 'injectstem-facial',
         name: 'InjectStem™ Facial',
-        description: 'This age-defying facial is infused with plant stem cell technology and peptides to visibly smooth fine lines, firm the skin, and restore hydration. Featuring Epicuren&apos;s powerful InjecStem™ Bio-Firming Serum, this treatment is ideal for those seeking a non-invasive alternative to injectables, delivering a lifted and sculpted appearance.',
+        description: 'This age-defying facial is infused with plant stem cell technology and peptides to visibly smooth fine lines, firm the skin, and restore hydration. Featuring Epicurens powerful InjecStem™ Bio-Firming Serum, this treatment is ideal for those seeking a non-invasive alternative to injectables, delivering a lifted and sculpted appearance.',
         price: '$175',
         duration: '75 min',
         image: '/images/inject-stem.png',
@@ -41,7 +41,7 @@ const services = [
       {
         id: 'glycolic-resurfacing-facial',
         name: 'Glycolic Resurfacing Facial',
-        description: 'A powerful resurfacing treatment using Epicuren&apos;s Glycolic Polymer Solution to dissolve dead skin cells, even out skin tone, and minimize pores. This facial promotes collagen production, leaving your skin smoother, brighter, and more youthful. Recommended for uneven skin tone, hyperpigmentation, and fine lines.',
+        description: 'A powerful resurfacing treatment using Epicurens Glycolic Polymer Solution to dissolve dead skin cells, even out skin tone, and minimize pores. This facial promotes collagen production, leaving your skin smoother, brighter, and more youthful. Recommended for uneven skin tone, hyperpigmentation, and fine lines.',
         price: '$165',
         duration: '60 min',
         image: '/images/signaturefacial.png',
@@ -49,10 +49,26 @@ const services = [
       {
         id: 'compromised-skin-recovery',
         name: 'Compromised Skin Recovery Facial',
-        description: 'Designed for sensitive, reactive, or post-procedure skin, this ultra-gentle treatment calms inflammation, strengthens the skin barrier, and deeply hydrates. Using Epicuren&apos;s soothing Hydrating Soothe Dermal Repair Mist and Hydrating Mineral Mask, this facial helps restore and protect delicate skin while promoting long-term resilience.',
+        description: 'Designed for sensitive, reactive, or post-procedure skin, this ultra-gentle treatment calms inflammation, strengthens the skin barrier, and deeply hydrates. Using Epicurens soothing Hydrating Soothe Dermal Repair Mist and Hydrating Mineral Mask, this facial helps restore and protect delicate skin while promoting long-term resilience.',
         price: '$175',
         duration: '75 min',
         image: '/images/recovery-facial.png',
+      },
+      {
+        id: 'teen-clarifying-facial',
+        name: 'Teen Clarifying Facial',
+        description: 'Designed specifically for teen skin, this 30-minute acne-focused facial helps clear breakouts, reduce inflammation, and prevent future congestion. The treatment begins with a deep cleanse and gentle exfoliation, followed by high-frequency therapy to target acne-causing bacteria and promote healing. A detoxifying clay mask is then applied to absorb excess oil and calm the skin, leaving it balanced and refreshed. Perfect for teens struggling with breakouts, this treatment provides professional-grade care in a quick, effective session.',
+        price: '$75',
+        duration: '30 min',
+        image: '/images/teen-facial.jpg',
+      },
+      {
+        id: 'renew-glow-facial',
+        name: 'Renew & Glow Facial',
+        description: 'Experience the ultimate skin rejuvenation with our Microdermabrasion & LED Light Therapy Facial. This advanced treatment begins with a deep cleanse and gentle exfoliation, followed by microdermabrasion to resurface and refine your skin&apos;s texture, reducing the appearance of fine lines, sun damage, and congestion. A customized LED light therapy mask is then applied to target specific skin concerns such as acne, inflammation, or collagen production, leaving your skin radiant and refreshed. This facial is perfect for those looking to achieve a smoother, brighter, and more youthful complexion in just one hour.',
+        price: '$225',
+        duration: '60 min',
+        image: '/images/renew-glow-facial.jpg',
       }
     ]
   },
@@ -63,7 +79,7 @@ const services = [
     items: [
       {
         id: 'manual-microdermabrasion',
-        name: 'Manual Microdermabrasion with Epicuren&apos;s Micro-Derm Ultra-Refining Scrub',
+        name: 'Manual Microdermabrasion with Epicurens Micro-Derm Ultra-Refining Scrub',
         description: 'A gentle yet effective exfoliation treatment to smooth, brighten, and refine skin texture.',
         price: '$30',
         duration: '15 min',
@@ -112,7 +128,7 @@ const services = [
       {
         id: 'silver-ion-mask',
         name: 'Silver Ion Mask',
-        description: 'An advanced mask infused with silver ions to help soothe, purify, and boost skin&apos;s natural healing process, ideal for acne-prone or sensitive skin.',
+        description: 'An advanced mask infused with silver ions to help soothe, purify, and boost the skins natural healing process, ideal for acne-prone or sensitive skin.',
         price: '$30',
         duration: '15 min',
         image: '/images/service-facial.jpg',
