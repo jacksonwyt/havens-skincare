@@ -22,7 +22,7 @@ const services = [
         duration: '60 min',
         image: '/images/products2.png',
       },
-      {
+     {
         id: 'injectstem-facial',
         name: 'InjectStem™ Facial',
         description: 'This age-defying facial is infused with plant stem cell technology and peptides to visibly smooth fine lines, firm the skin, and restore hydration. Featuring Epicurens powerful InjecStem™ Bio-Firming Serum, this treatment is ideal for those seeking a non-invasive alternative to injectables, delivering a lifted and sculpted appearance.',
@@ -30,7 +30,7 @@ const services = [
         duration: '75 min',
         image: '/images/inject-stem.png',
       },
-      {
+     {
         id: 'pumpkin-apple-spice-peel',
         name: 'Pumpkin Apple Spice Peel Facial',
         description: 'Replenish and renew your skin with this seasonal-inspired peel. A gentle yet effective blend of pumpkin enzymes, apple cider extract, and AHAs deeply exfoliate, refine texture, and infuse the skin with antioxidants for a radiant, healthy glow. Ideal for dull, congested, or sun-damaged skin.',
@@ -38,7 +38,7 @@ const services = [
         duration: '60 min',
         image: '/images/facial4.jpg',
       },
-      {
+     {
         id: 'glycolic-resurfacing-facial',
         name: 'Glycolic Resurfacing Facial',
         description: 'A powerful resurfacing treatment using Epicurens Glycolic Polymer Solution to dissolve dead skin cells, even out skin tone, and minimize pores. This facial promotes collagen production, leaving your skin smoother, brighter, and more youthful. Recommended for uneven skin tone, hyperpigmentation, and fine lines.',

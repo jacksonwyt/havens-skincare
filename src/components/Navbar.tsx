@@ -61,10 +61,10 @@ const Navbar: React.FC = () => {
                   <span className="relative z-10 transition-colors duration-300">Contact</span>
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-haven-blue group-hover:w-full transition-all duration-300"></span>
                 </Link>
-                <Link href="/booking" className="btn-primary btn-with-icon text-sm">
+                <a href="https://heatherhavens.setmore.com" target="_blank" rel="noopener noreferrer" className="btn-primary btn-with-icon text-sm">
                   <FiCalendar className="mr-1" />
                   Book Now
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -103,10 +103,10 @@ const Navbar: React.FC = () => {
           <Link href="/contact" className="block text-gray-800 hover:text-haven-blue px-3 py-2 rounded-md text-base font-medium transition-colors duration-300">
             Contact
           </Link>
-          <Link href="/booking" className="btn-primary btn-with-icon mx-3 mt-3 text-center flex justify-center">
+          <a href="https://heatherhavens.setmore.com" target="_blank" rel="noopener noreferrer" className="btn-primary btn-with-icon mx-3 mt-3 text-center flex justify-center">
             <FiCalendar className="mr-1" />
             Book Now
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

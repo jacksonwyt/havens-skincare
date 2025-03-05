@@ -19,6 +19,8 @@ export default function Home() {
             priority
             className="scale-110"
           />
+          {/* Dark tint overlay - more transparent, sharper */}
+          <div className="absolute inset-0 bg-black/15"></div>
         </div>
         
         {/* Logo and button content */}
@@ -56,13 +58,15 @@ export default function Home() {
             </Link>
             
             {/* Book an Appointment button */}
-            <Link 
-              href="/booking" 
+            <a 
+              href="https://heatherhavens.setmore.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="btn-seafoam btn-with-icon"
             >
               <FiCalendar className="mr-2" />
               Book an Appointment
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -142,7 +146,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            
+           
             {/* Service 2 */}
             <div className="bg-haven-blue/10 backdrop-blur-sm rounded-lg p-6 border border-haven-blue/10 shadow-lg transform transition-all duration-500 hover:-translate-y-2 hover:shadow-xl" data-aos="fade-up" data-aos-delay="200">
               <div className="bg-white/60 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 mx-auto">
@@ -199,13 +203,15 @@ export default function Home() {
             <p className="text-white/90 mb-8 text-lg">
               Book your appointment today and experience the perfect blend of science and relaxation at Havens Skincare.
             </p>
-            <Link 
-              href="/booking" 
+            <a 
+              href="https://heatherhavens.setmore.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
               className="btn-secondary btn-with-icon"
             >
               <FiCalendar className="mr-2" />
               Book Your Appointment
-            </Link>
+            </a>
           </div>
         </div>
       </section>
