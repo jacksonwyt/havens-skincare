@@ -12,7 +12,11 @@ type ImageWithFallbackProps = Omit<ImageProps, 'src'> & {
  * Custom Image component that tries to load the image with the original extension,
  * then falls back to .svg version, and finally to a universal placeholder if both fail
  */
-const ImageWithFallback = ({ src, fallbackSrc, ...props }: ImageWithFallbackProps) => {
+const ImageWithFallback = ({ 
+  src, 
+  fallbackSrc,
+  ...props 
+}: ImageWithFallbackProps) => {
   const [fallbackLevel, setFallbackLevel] = useState(0);
   
   // Determine which source to use based on fallback level
