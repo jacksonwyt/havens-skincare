@@ -125,9 +125,14 @@ export default function Contact() {
               </p>
             </div>
             <div data-aos="zoom-in" data-aos-delay="300">
-              <Link href="/booking" className="bg-pink-100 text-gray-500 px-8 py-3 rounded-md hover:bg-gray-100 transition duration-300 inline-block font-medium">
+              <a 
+                href="https://heatherhavens.setmore.com" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="bg-pink-100 text-gray-500 px-8 py-3 rounded-md hover:bg-gray-100 transition duration-300 inline-block font-medium"
+              >
                 Book Your Appointment
-              </Link>
+              </a>
             </div>
           </div>
         </div>

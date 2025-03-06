@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimationProvider from "@/components/AnimationProvider";
+import ViewportHeightFix from "@/components/ViewportHeightFix";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ViewportHeightFix />
         <AnimationProvider>
           <Navbar />
-          <main className="min-h-screen">{children}</main>
+          <main className="min-h-[calc(100vh-var(--vh,1vh)*0)]">{children}</main>
           <Footer />
         </AnimationProvider>
       </body>

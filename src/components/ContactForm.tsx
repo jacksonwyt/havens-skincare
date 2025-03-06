@@ -174,10 +174,10 @@ const ContactForm: React.FC = () => {
           id="message"
           name="message"
           required
-          rows={5}
+          rows={4}
           value={formData.message}
           onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-seafoam focus:border-transparent"
+          className="w-full px-3 py-2 md:px-4 md:py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-seafoam focus:border-transparent resize-y min-h-[100px]"
           placeholder="How can we help you?"
         ></textarea>
       </div>

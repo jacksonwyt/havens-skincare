@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { FiAward, FiHeart, FiSun } from 'react-icons/fi';
+import ImageWithFallback from '@/components/ImageWithFallback';
 
 export const metadata = {
   title: "About Us | Haven's Skincare - Newport Beach Esthetician",
@@ -27,11 +27,13 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-2/6" data-aos="fade-right" data-aos-duration="800">
-              <div className="relative h-96 w-full rounded-lg overflow-hidden shadow-xl">
-                <Image
+              <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden shadow-xl">
+                <ImageWithFallback
                   src="/images/owner3.jpeg"
+                  fallbackSrc="/images/owner-avatar.png"
                   alt="Heather Havens, Founder and Lead Esthetician"
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   style={{ objectFit: 'cover' }}
                 />
               </div>

@@ -8,27 +8,15 @@
 }
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 245, 248, 255; /* Lighter blue-white background */
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 20, 35, 60; /* Darker blue background */
+  --background-end-rgb: 30, 40, 60; /* Slightly varied dark blue background end */
   --haven-blue-rgb: 12, 92, 180; /* Haven blue color in RGB format */
   --seafoam-rgb: 235, 199, 230; /* Seafoam pink color in RGB format */
-  --button-highlight: rgba(255, 255, 255, 0.4);
-  --button-shadow-light: rgba(0, 0, 0, 0.05);
-  --button-shadow-medium: rgba(0, 0, 0, 0.1);
-  --button-shadow-dark: rgba(0, 0, 0, 0.15);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 20, 35, 60; /* Darker blue background */
-    --background-end-rgb: 30, 40, 60; /* Slightly varied dark blue background end */
-    --button-highlight: rgba(255, 255, 255, 0.15);
-    --button-shadow-light: rgba(0, 0, 0, 0.2);
-    --button-shadow-medium: rgba(0, 0, 0, 0.3);
-    --button-shadow-dark: rgba(0, 0, 0, 0.4);
-  }
+  --button-highlight: rgba(255, 255, 255, 0.15);
+  --button-shadow-light: rgba(0, 0, 0, 0.2);
+  --button-shadow-medium: rgba(0, 0, 0, 0.3);
+  --button-shadow-dark: rgba(0, 0, 0, 0.4);
 }
 
 body {

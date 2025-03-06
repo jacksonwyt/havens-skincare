@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { FiClock, FiDollarSign, FiPlus } from 'react-icons/fi';
+import ImageWithFallback from '@/components/ImageWithFallback';
 
 export const metadata = {
   title: "Services | Haven's Skincare - Newport Beach Esthetician",
@@ -251,14 +251,16 @@ const services = [
 export default function Services() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative py-32 h-[500px] flex items-center">
+      {/* Hero Section - Responsive height with padding */}
+      <section className="relative py-20 md:py-32 flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <Image
+          <ImageWithFallback
             src="/images/Services.jpeg"
+            fallbackSrc="/images/placeholder.svg"
             alt="Services background"
             fill
+            sizes="100vw"
             style={{ 
               objectFit: 'cover',
               objectPosition: 'center' 
@@ -304,11 +306,13 @@ export default function Services() {
                     data-aos-duration="800"
                     data-aos-delay={index * 100}
                   >
-                    <div className="md:w-1/4 relative h-64 md:h-auto">
-                      <Image
+                    <div className="md:w-1/4 relative aspect-[4/3] md:aspect-auto">
+                      <ImageWithFallback
                         src={service.image}
+                        fallbackSrc="/images/placeholder.svg"
                         alt={service.name}
                         fill
+                        sizes="(max-width: 768px) 100vw, 25vw"
                         style={{ objectFit: 'cover' }}
                       />
                     </div>
@@ -327,9 +331,14 @@ export default function Services() {
                         </div>
                       </div>
                       <p className="text-gray-600 mb-6">{service.description}</p>
-                      <Link href="/booking" className="btn-primary text-sm">
+                      <a 
+                        href="https://heatherhavens.setmore.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="btn-primary text-sm"
+                      >
                         Book this Service
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 ))}
@@ -354,9 +363,14 @@ export default function Services() {
                   ))}
                 </div>
                 <div className="mt-8 text-center">
-                  <Link href="/booking" className="btn-primary text-sm">
+                  <a 
+                    href="https://heatherhavens.setmore.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn-primary text-sm"
+                  >
                     Book Enhancement Add-Ons
-                  </Link>
+                  </a>
                 </div>
               </div>
             )}
@@ -389,9 +403,14 @@ export default function Services() {
                     ensuring a gentle yet effective experience for all clients.
                   </p>
                   <div className="mt-4 text-center">
-                    <Link href="/booking" className="btn-primary text-sm">
+                    <a 
+                      href="https://heatherhavens.setmore.com" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="btn-primary text-sm"
+                    >
                       Book Waxing Services
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -460,9 +479,14 @@ export default function Services() {
               </p>
             </div>
             <div data-aos="zoom-in" data-aos-delay="300">
-              <Link href="/booking" className="bg-gray-700 text-seafoam-text-dark px-8 py-3 rounded-md hover:bg-gray-100 transition duration-300 inline-block font-medium">
+              <a 
+                href="https://heatherhavens.setmore.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-700 text-seafoam-text-dark px-8 py-3 rounded-md hover:bg-gray-100 transition duration-300 inline-block font-medium"
+              >
                 Book Your Appointment
-              </Link>
+              </a>
             </div>
           </div>
         </div>
