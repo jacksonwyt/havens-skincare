@@ -6,70 +6,81 @@ import ImageWithFallback from "@/components/ImageWithFallback";
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section - Responsive with padding instead of fixed height */}
-      <section className="relative py-20 md:py-32 flex items-center justify-center overflow-hidden">
-        {/* Main background image - Modified for responsive height */}
-        <div className="absolute inset-0 z-0">
-          <ImageWithFallback
-            src="/images/background.png"
-            fallbackSrc="/images/home.jpg"
-            alt="Newport Beach coastline"
-            fill
-            sizes="100vw"
-            style={{ objectFit: "cover", objectPosition: "center" }}
-            priority
-            className="scale-110"
-          />
-          {/* Dark tint overlay - more transparent, sharper */}
-          <div className="absolute inset-0 bg-black/15"></div>
-        </div>
-        
-        {/* Logo and button content */}
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl flex flex-col items-center justify-center h-full" data-aos="fade-up" data-aos-duration="1000">
-          {/* Large logo in the center */}
-          <div className="mb-8" data-aos="zoom-in" data-aos-duration="1200">
-            <ImageWithFallback 
-              src="/images/logo.png" 
-              fallbackSrc="/images/placeholder.svg"
-              alt="Haven's Skincare Logo" 
-              width={800} 
-              height={400} 
-              sizes="(max-width: 768px) 90vw, 800px"
-              className="transition-transform duration-500 hover:scale-105 w-full max-w-[800px]"
-              priority
-            />
-          </div>
-          
-          {/* Buttons row */}
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center" data-aos="zoom-in" data-aos-delay="300">
-            {/* Services button */}
-            <Link 
-              href="/services" 
-              className="btn-primary btn-with-icon"
-            >
-              <FiLayers className="mr-2" />
-              Services
-            </Link>
+      {/* Hero Section - Business Card Style */}
+      <section className="relative py-16 md:py-24 flex items-center justify-center overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          {/* Business Card Container */}
+          <div className="relative aspect-[1.8/1] w-full max-w-6xl mx-auto shadow-xl" data-aos="fade-up" data-aos-duration="1000">
+            {/* Main background image - Business card shape with rounded corners */}
+            <div className="absolute inset-0 z-0 rounded-xl overflow-hidden border border-gray-200/30">
+              <ImageWithFallback
+                src="/images/background.png"
+                fallbackSrc="/images/home.jpg"
+                alt="Newport Beach coastline"
+                fill
+                sizes="100vw"
+                style={{ 
+                  objectFit: "cover", 
+                  objectPosition: "center"
+                }}
+                priority
+                className="w-full h-full"
+              />
+              {/* Dark tint overlay - business card style */}
+              <div className="absolute inset-0 bg-black/20"></div>
+            </div>
             
-            {/* About button */}
-            <Link 
-              href="/about" 
-              className="btn-secondary btn-with-icon"
-            >
-              <FiInfo className="mr-2" />
-              About
-            </Link>
+            {/* Business Card Content */}
+            <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-between p-6 md:p-10">
+              {/* Buttons side - left side of business card */}
+              <div className="w-full md:w-1/2 flex flex-col gap-4 items-center md:items-start order-2 md:order-1 mb-6 md:mb-0" data-aos="zoom-in" data-aos-delay="300">
+                {/* Services button */}
+                <Link 
+                  href="/services" 
+                  className="btn-primary btn-with-icon w-full md:w-auto text-lg"
+                >
+                  <FiLayers className="mr-2" />
+                  Services
+                </Link>
+                
+                {/* About button */}
+                <Link 
+                  href="/about" 
+                  className="btn-secondary btn-with-icon w-full md:w-auto text-lg"
+                >
+                  <FiInfo className="mr-2" />
+                  About
+                </Link>
+                
+                {/* Book an Appointment button */}
+                <a 
+                  href="https://heatherhavens.setmore.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn-seafoam btn-with-icon w-full md:w-auto text-lg"
+                >
+                  <FiCalendar className="mr-2" />
+                  Book an Appointment
+                </a>
+              </div>
+              
+              {/* Logo side - right side of business card */}
+              <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2" data-aos="zoom-in" data-aos-duration="1200">
+                <ImageWithFallback 
+                  src="/images/logo.png" 
+                  fallbackSrc="/images/placeholder.svg"
+                  alt="Haven's Skincare Logo" 
+                  width={600} 
+                  height={300} 
+                  sizes="(max-width: 768px) 90vw, 600px"
+                  className="transition-transform duration-500 hover:scale-105 max-w-full max-h-[180px] md:max-h-[220px] object-contain"
+                  priority
+                />
+              </div>
+            </div>
             
-            {/* Book an Appointment button */}
-            <a 
-              href="https://heatherhavens.setmore.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-seafoam btn-with-icon"
-            >
-              <FiCalendar className="mr-2" />
-              Book an Appointment
-            </a>
+            {/* Business Card Edge Effect */}
+            <div className="absolute inset-0 rounded-xl border border-white/10 pointer-events-none shadow-[0_0_15px_rgba(255,255,255,0.1),inset_0_0_15px_rgba(255,255,255,0.1)]"></div>
           </div>
         </div>
       </section>
