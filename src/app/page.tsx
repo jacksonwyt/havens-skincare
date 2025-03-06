@@ -11,7 +11,7 @@ export default function Home() {
         {/* Main background image - Modified for responsive height */}
         <div className="absolute inset-0 z-0">
           <ImageWithFallback
-            src="/images/background.jpeg"
+            src="/images/background.png"
             fallbackSrc="/images/home.jpg"
             alt="Newport Beach coastline"
             fill
@@ -186,7 +186,7 @@ export default function Home() {
           </div>
           
           <div className="text-center mt-12" data-aos="fade-up" data-aos-delay="400">
-            <Link href="/services" className="btn-primary btn-with-icon">
+            <Link href="/services" className="btn-secondary btn-with-icon">
               <FiLayers className="mr-2" />
               View All Services
             </Link>
@@ -212,7 +212,7 @@ export default function Home() {
               href="https://heatherhavens.setmore.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="btn-secondary btn-with-icon"
+              className="btn-primary btn-with-icon"
             >
               <FiCalendar className="mr-2" />
               Book Your Appointment

@@ -29,7 +29,7 @@ export default function About() {
             <div className="lg:w-2/6" data-aos="fade-right" data-aos-duration="800">
               <div className="relative aspect-[3/4] w-full rounded-lg overflow-hidden shadow-xl">
                 <ImageWithFallback
-                  src="/images/owner3.jpeg"
+                  src="/images/Owner3.jpeg"
                   fallbackSrc="/images/owner-avatar.png"
                   alt="Heather Havens, Founder and Lead Esthetician"
                   fill
@@ -69,22 +69,65 @@ export default function About() {
       </section>
 
       {/* Our Mission */}
-      <section className="py-16 bg-sand bg-opacity-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
-            <h2 className="text-3xl font-bold text-gray-100 mb-4">The Havens Mission</h2>
-            <div className="w-24 h-1 bg-seafoam mx-auto"></div>
+      <section className="py-12 bg-sand bg-opacity-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8" data-aos="fade-up" data-aos-duration="800">
+            <h2 className="text-3xl font-bold text-gray-100 mb-3">The Havens Mission</h2>
+            <div className="w-20 h-1 bg-seafoam mx-auto"></div>
           </div>
          
-          <div className="max-w-3xl mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
-            <p className="text-xl text-gray-300 italic mb-8">
-              &quot;To enhance your natural beauty with personalized treatments that rejuvenate both skin and spirit.&quot;
-            </p>
-            <p className="text-gray-400 mb-8">
-              At Havens Skincare, we&#39;re dedicated to providing exceptional skincare services. We combine the latest skincare innovations with natural elements for treatments that leave you feeling refreshed, renewed, and radiant.
-            </p>
-            <div className="inline-flex items-center text-seafoam-text-dark" data-aos="zoom-in" data-aos-delay="400">
-              <FiHeart className="mr-2" /> Personalized Care For Every Client
+          <div className="flex flex-col lg:flex-row gap-6">
+            {/* Havens Mission Section */}
+            <div className="lg:w-3/5" data-aos="fade-right" data-aos-duration="800">
+              <div className="text-center h-full flex flex-col justify-center">
+                <p className="text-lg text-gray-300 italic mb-5">
+                  &quot;To enhance your natural beauty with personalized treatments that rejuvenate both skin and spirit.&quot;
+                </p>
+                <p className="text-sm text-gray-400 mb-5">
+                  At Havens Skincare, we&#39;re dedicated to providing exceptional skincare services. We combine the latest skincare innovations with natural elements for treatments that leave you feeling refreshed, renewed, and radiant.
+                </p>
+                <div className="flex justify-center w-full">
+                  <div className="inline-flex items-center text-seafoam-text-dark text-sm" data-aos="zoom-in" data-aos-delay="400">
+                    <FiHeart className="mr-2" /> Personalized Care For Every Client
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* In Loving Memory Section */}
+            <div className="lg:w-2/5 lg:border-l lg:border-gray-600 lg:pl-6" data-aos="fade-left" data-aos-duration="800">
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-100 mb-4">In Loving Memory</h3>
+                <div className="flex flex-col items-center">
+                  <div className="w-full max-w-[180px] mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <div className="relative w-full mx-auto rounded-lg overflow-hidden" 
+                      style={{ 
+                        boxShadow: '0 0 20px rgba(255, 215, 170, 0.25)',
+                        border: '2px solid rgba(255,255,255,0.2)',
+                        maxWidth: "100%", 
+                        height: "auto" 
+                      }}>
+                      <ImageWithFallback
+                        src="/images/Chasen.JPG"
+                        fallbackSrc="/images/owner-avatar.png"
+                        alt="In loving memory of Chasen"
+                        width={428}
+                        height={535}
+                        style={{ objectFit: 'contain', width: "100%", height: "auto" }}
+                        className="rounded-lg"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full text-center mt-4" data-aos="fade-up" data-aos-delay="300">
+                    <p className="text-sm text-gray-300 italic mb-2">
+                      This space is dedicated to the loving memory of my son Chasen.
+                    </p>
+                    <p className="text-xs text-gray-400">
+                      His spirit and light continue to inspire our mission of healing and transformation.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

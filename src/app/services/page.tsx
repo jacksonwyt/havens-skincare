@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { FiClock, FiDollarSign, FiPlus } from 'react-icons/fi';
 import ImageWithFallback from '@/components/ImageWithFallback';
 
@@ -28,7 +27,7 @@ const services = [
         description: 'This age-defying facial is infused with plant stem cell technology and peptides to visibly smooth fine lines, firm the skin, and restore hydration. Featuring Epicurens powerful InjecStem™ Bio-Firming Serum, this treatment is ideal for those seeking a non-invasive alternative to injectables, delivering a lifted and sculpted appearance.',
         price: '$175',
         duration: '75 min',
-        image: '/images/inject-stem.png',
+        image: '/images/inject-stem.jpeg',
       },
      {
         id: 'pumpkin-apple-spice-peel',
@@ -68,7 +67,7 @@ const services = [
         description: 'Experience the ultimate skin rejuvenation with our Microdermabrasion & LED Light Therapy Facial. This advanced treatment begins with a deep cleanse and gentle exfoliation, followed by microdermabrasion to resurface and refine your skin&apos;s texture, reducing the appearance of fine lines, sun damage, and congestion. A customized LED light therapy mask is then applied to target specific skin concerns such as acne, inflammation, or collagen production, leaving your skin radiant and refreshed. This facial is perfect for those looking to achieve a smoother, brighter, and more youthful complexion in just one hour.',
         price: '$225',
         duration: '60 min',
-        image: '/images/renew-glow-facial.jpg',
+        image: '/images/renew-glow.png',
       }
     ]
   },
@@ -83,7 +82,7 @@ const services = [
         description: 'A gentle yet effective exfoliation treatment to smooth, brighten, and refine skin texture.',
         price: '$30',
         duration: '15 min',
-        image: '/images/service-microdermabrasion.jpg',
+        image: '/images/home.jpg',
       },
       {
         id: 'paraffin-hand',
@@ -94,10 +93,18 @@ const services = [
         image: '/images/service-anti-aging.jpg',
       },
       {
-        id: 'collagen-eye',
-        name: 'Collagen Eye Treatment',
-        description: 'A hydrating and firming eye mask to reduce puffiness, fine lines, and dark circles.',
-        price: '$25',
+        id: 'eyebrow-tint',
+        name: 'Eyebrow Tint',
+        description: 'Semi-permanent color tinting for eyebrows to enhance definition and fullness without daily makeup application.',
+        price: '$30',
+        duration: '15 min',
+        image: '/images/service-facial.jpg',
+      },
+      {
+        id: 'eyelash-tint',
+        name: 'Eyelash Tint',
+        description: 'Semi-permanent color tinting for eyelashes to darken and define your natural lashes for a mascara-like effect.',
+        price: '$40',
         duration: '15 min',
         image: '/images/service-facial.jpg',
       },
@@ -320,11 +327,11 @@ export default function Services() {
                       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
                         <h3 className="text-2xl font-bold text-gray-800">{service.name}</h3>
                         <div className="flex items-center mt-2 md:mt-0 space-x-4">
-                          <div className="flex items-center text-seafoam-text-dark">
+                          <div className="flex items-center text-gray-800">
                             <FiDollarSign className="mr-1" />
-                            <span>{service.price}</span>
+                            <span>{service.price.replace('$', '')}</span>
                           </div>
-                          <div className="flex items-center text-seafoam-text-dark">
+                          <div className="flex items-center text-gray-800">
                             <FiClock className="mr-1" />
                             <span>{service.duration}</span>
                           </div>
@@ -353,9 +360,12 @@ export default function Services() {
                     <div key={service.id} id={service.id} className="border-b pb-4 last:border-b-0 md:last:border-b md:even:border-b-0 hover:bg-soft-blue hover:bg-opacity-5 transition-colors p-2 rounded">
                       <div className="flex justify-between items-start mb-1">
                         <h3 className="text-lg font-semibold text-gray-800">{service.name}</h3>
-                        <div className="flex items-center justify-end space-x-3 text-seafoam-text-dark whitespace-nowrap ml-2">
-                          <span>{service.price}</span>
-                          <span className="text-sm text-gray-500">({service.duration})</span>
+                        <div className="flex items-center justify-end space-x-3 text-gray-800 whitespace-nowrap ml-2">
+                          <div className="flex items-center">
+                            <FiDollarSign className="mr-1" />
+                            <span>{service.price.replace('$', '')}</span>
+                          </div>
+                          <span className="text-sm text-gray-800">({service.duration})</span>
                         </div>
                       </div>
                       <p className="text-sm text-gray-600">{service.description}</p>
@@ -384,10 +394,13 @@ export default function Services() {
                       {category.items.map((service) => (
                         <div key={service.id} id={service.id} className="flex flex-col">
                           <h3 className="text-lg font-semibold text-gray-800">{service.name}</h3>
-                          <div className="flex items-center text-seafoam-text-dark mt-1">
-                            <span className="font-medium">{service.price}</span>
+                          <div className="flex items-center text-gray-800 mt-1">
+                            <div className="flex items-center">
+                              <FiDollarSign className="mr-1" />
+                              <span className="font-medium">{service.price.replace('$', '')}</span>
+                            </div>
                             <span className="mx-2 text-gray-400">•</span>
-                            <span className="text-sm text-gray-500">{service.duration}</span>
+                            <span className="text-sm text-gray-800">{service.duration}</span>
                           </div>
                         </div>
                       ))}
