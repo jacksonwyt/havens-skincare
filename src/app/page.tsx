@@ -20,37 +20,43 @@ export default function Home() {
             priority
             style={{ 
               objectFit: "cover", 
-              objectPosition: "center 30%"
+              objectPosition: "center 30%",
+              zIndex: -1
             }}
             className="w-full h-full"
           />
           {/* Glass-like column overlay - positioned on the left side */}
-          <div className="absolute top-0 bottom-0 left-[5%] sm:left-[8%] md:left-[12%] w-[280px] sm:w-[300px] md:w-[350px] bg-white/10 backdrop-blur-md border-r border-white/20 shadow-2xl"></div>
+          <div className="absolute top-0 bottom-0 left-[5%] sm:left-[8%] md:left-[12%] w-[280px] sm:w-[300px] md:w-[350px] bg-white/10 border-r border-white/20 shadow-xl z-30 pointer-events-auto">
+            {/* Content inside the column */}
+            <div className="h-full flex flex-col justify-center px-6 py-8">
+              {/* Booking component directly in the column */}
+              <PremiumNavigation />
+            </div>
+          </div>
         </div>
         
-        <div className="relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-24">
-          {/* Business Card Content */}
-          <div className="flex flex-col md:flex-row items-center justify-around gap-6 md:gap-8 max-w-5xl mx-auto">
-            {/* Navigation side */}
-            <div className="w-full md:w-2/5 flex flex-col items-center order-2 md:order-1 mb-6 md:mb-0 md:ml-[calc(12%-30px)]" data-aos="zoom-in" data-aos-delay="300">
-              {/* Premium Navigation component container with glass effect */}
-              <div className="w-full max-w-[280px] sm:max-w-sm p-5 sm:p-7 bg-white/10 backdrop-blur-md border border-white/20 rounded-md shadow-2xl transition-all duration-300 hover:shadow-[0_10px_40px_-15px_rgba(255,255,255,0.2)]">
-                <PremiumNavigation />
-              </div>
-            </div>
-            
-            {/* Logo side */}
-            <div className="w-full md:w-2/5 flex justify-center order-1 md:order-2 mb-4 md:mb-0" data-aos="zoom-in" data-aos-duration="1200">
-              <ImageWithFallback 
-                src="/images/logo.png" 
-                fallbackSrc="/images/placeholder.svg"
-                alt="Haven's Skincare Logo" 
-                width={600} 
-                height={300} 
-                sizes="(max-width: 640px) 85vw, (max-width: 768px) 90vw, 600px"
-                className="transition-transform duration-500 hover:scale-105 max-w-full h-auto max-h-[150px] sm:max-h-[180px] md:max-h-[220px] object-contain"
-                priority
-              />
+        <div className="relative z-20 w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-24">
+          {/* Business Card Content - Logo only now */}
+          <div className="flex justify-end items-center max-w-5xl mx-auto">
+            {/* Logo side - now larger and more centered on the right side */}
+            <div className="w-full md:w-3/5 flex justify-center md:justify-end" data-aos="zoom-in" data-aos-duration="1200">
+              <a 
+                href="https://heatherhavens.setmore.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer transition-transform duration-500 hover:scale-105"
+              >
+                <ImageWithFallback 
+                  src="/images/logo.png" 
+                  fallbackSrc="/images/placeholder.svg"
+                  alt="Haven's Skincare Logo" 
+                  width={700} 
+                  height={350} 
+                  sizes="(max-width: 640px) 85vw, (max-width: 768px) 90vw, 700px"
+                  className="max-w-full h-auto max-h-[180px] sm:max-h-[220px] md:max-h-[250px] object-contain"
+                  priority
+                />
+              </a>
             </div>
           </div>
         </div>

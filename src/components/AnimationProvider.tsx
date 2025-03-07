@@ -33,25 +33,26 @@ export default function AnimationProvider({ children }: AnimationProviderProps) 
       // Global settings
       duration: isMobile ? 400 : 800, // Shorter duration on mobile
       easing: 'ease-out-cubic',
-      once: true, // Only animate once to improve performance
-      mirror: false,
-      offset: isMobile ? 50 : 120, // Smaller offset on mobile
+      once: false, // Allow re-animation when scrolling back to elements
+      mirror: true, // Mirror animations when scrolling back up
+      offset: isMobile ? 40 : 100, // Smaller offset on mobile
       delay: 0,
-      throttleDelay: isMobile ? 99 : 99, // Throttle delay for performance
+      throttleDelay: 99, // Throttle delay for performance
       anchorPlacement: 'top-bottom',
-      disable: 'phone', // Disable on very small devices to prioritize performance
+      disable: false, // Enable on all devices but optimize for mobile
     });
+    
+    // Custom refresh function that we'll use in the cleanup
+    const refreshAOS = () => {
+      AOS.refresh();
+    };
 
     // Refresh AOS when window is resized
-    window.addEventListener('resize', () => {
-      AOS.refresh();
-    });
+    window.addEventListener('resize', refreshAOS);
 
     return () => {
       window.removeEventListener('resize', checkMobile);
-      window.removeEventListener('resize', () => {
-        AOS.refresh();
-      });
+      window.removeEventListener('resize', refreshAOS);
     };
   }, [isMobile]);
 

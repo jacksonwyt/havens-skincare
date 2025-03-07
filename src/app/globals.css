@@ -431,3 +431,20 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.5s ease;
   }
 }
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(1rem) scale(1);
+  }
+  50% {
+    opacity: .7;
+    transform: translateX(1.5rem) scale(1.05);
+  }
+}
