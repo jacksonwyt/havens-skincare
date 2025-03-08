@@ -33,7 +33,7 @@ const Footer = () => {
                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/15 flex items-center justify-center backdrop-blur-sm hover:bg-white/25 transition-all duration-300 group">
                 <FiFacebook className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:scale-110 transition-transform duration-300" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+              <a href="https://instagram.com/@havens_skincare_44" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/15 flex items-center justify-center backdrop-blur-sm hover:bg-white/25 transition-all duration-300 group">
                 <FiInstagram className="w-4 h-4 sm:w-5 sm:h-5 text-white group-hover:scale-110 transition-transform duration-300" />
               </a>
@@ -78,9 +78,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <div className="footer-link text-xs sm:text-sm">
-                    <p>Mon-Fri: 9am - 7pm</p>
-                    <p>Sat: 10am - 6pm</p>
-                    <p>Sun: Closed</p>
+                    <p>Mon-Sat: 9am - 9pm</p>
+                    <p>Sun: Appointment Only</p>
                   </div>
                 </div>
               </li>
