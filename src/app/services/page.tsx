@@ -16,9 +16,9 @@ const services = [
       {
         id: 'epicuren-signature-facial',
         name: 'Epicuren Signature Facial',
-        description: 'Indulge in Epicurens most celebrated facial, designed to lift, tone, and revitalize your skin. This enzymatic treatment uses Epicurens Metadermabolic Enzyme to stimulate cell turnover, improve elasticity, and leave your skin visibly firmer and refreshed. Perfect for all skin types looking for a vibrant, youthful glow.',
-        price: '$150',
-        duration: '60 min',
+        description: 'Indulge in Epicurens most celebrated facial, designed to lift, tone, and revitalize your skin. This enzymatic treatment uses Epicurens Metadermabolic Enzyme to stimulate cell turnover, improve elasticity, and leave your skin visibly firmer and refreshed. Perfect for all skin types looking for a vibrant, youthful glow. Parrafin hand treatment and foot massage included.',
+        price: '$175',
+        duration: '75 min',
         image: '/images/products2.png',
       },
      {
@@ -187,14 +187,7 @@ const services = [
         duration: '30 min',
         image: '/images/service-face-wax.jpg',
       },
-      {
-        id: 'brazilian-wax',
-        name: 'Brazilian Wax',
-        description: 'Complete hair removal for the bikini area with minimal discomfort using premium wax formulations.',
-        price: '$85',
-        duration: '30 min',
-        image: '/images/service-face-wax.jpg',
-      },
+     
       {
         id: 'bikini-wax',
         name: 'Bikini Wax',
