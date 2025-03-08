@@ -84,11 +84,7 @@ const Navbar: React.FC = () => {
                     <span className="relative z-10 transition-colors duration-300">Services</span>
                     <span className={`absolute bottom-0 left-0 h-0.5 bg-haven-blue transition-all duration-300 ${pathname === '/services' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                   </Link>
-                  <Link href="/about" className={`text-gray-800 hover:text-haven-blue px-2 md:px-3 py-2 rounded-md text-sm font-medium relative overflow-hidden group ${pathname === '/about' ? 'text-haven-blue' : ''}`} data-aos="fade-down" data-aos-delay="300">
-                    <span className="relative z-10 transition-colors duration-300">About</span>
-                    <span className={`absolute bottom-0 left-0 h-0.5 bg-haven-blue transition-all duration-300 ${pathname === '/about' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-                  </Link>
-                  <Link href="/contact" className={`text-gray-800 hover:text-haven-blue px-2 md:px-3 py-2 rounded-md text-sm font-medium relative overflow-hidden group ${pathname === '/contact' ? 'text-haven-blue' : ''}`} data-aos="fade-down" data-aos-delay="400">
+                  <Link href="/contact" className={`text-gray-800 hover:text-haven-blue px-2 md:px-3 py-2 rounded-md text-sm font-medium relative overflow-hidden group ${pathname === '/contact' ? 'text-haven-blue' : ''}`} data-aos="fade-down" data-aos-delay="300">
                     <span className="relative z-10 transition-colors duration-300">Contact</span>
                     <span className={`absolute bottom-0 left-0 h-0.5 bg-haven-blue transition-all duration-300 ${pathname === '/contact' ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                   </Link>
@@ -99,7 +95,7 @@ const Navbar: React.FC = () => {
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="btn-primary btn-with-icon text-xs md:text-sm py-1.5 px-3 md:py-2 md:px-4 ml-1 md:ml-3"
-                      data-aos="fade-down" data-aos-delay="500"
+                      data-aos="fade-down" data-aos-delay="400"
                     >
                       <FiCalendar className="mr-1" />
                       Book Now
@@ -147,9 +143,6 @@ const Navbar: React.FC = () => {
             </Link>
             <Link href="/services" className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${pathname === '/services' ? 'text-haven-blue bg-haven-blue/10' : 'text-gray-800 hover:text-haven-blue hover:bg-white/50'}`}>
               Services
-            </Link>
-            <Link href="/about" className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${pathname === '/about' ? 'text-haven-blue bg-haven-blue/10' : 'text-gray-800 hover:text-haven-blue hover:bg-white/50'}`}>
-              About
             </Link>
             <Link href="/contact" className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-300 ${pathname === '/contact' ? 'text-haven-blue bg-haven-blue/10' : 'text-gray-800 hover:text-haven-blue hover:bg-white/50'}`}>
               Contact

@@ -436,6 +436,10 @@ h1, h2, h3, h4, h5, h6 {
   .animate-pulse-slow {
     animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
+
+  .animate-marquee-fast {
+    animation: marquee 10s linear infinite;
+  }
 }
 
 @keyframes pulse {
@@ -446,5 +450,14 @@ h1, h2, h3, h4, h5, h6 {
   50% {
     opacity: .7;
     transform: translateX(1.5rem) scale(1.05);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }

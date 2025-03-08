@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { FiCheck, FiCalendar, FiInfo, FiLayers } from "react-icons/fi";
+import { FiCheck, FiCalendar, FiLayers } from "react-icons/fi";
 import ImageWithFallback from "@/components/ImageWithFallback";
-import PremiumNavigation from "@/components/PremiumNavigation";
+import Image from "next/image";
 
 
 export default function Home() {
@@ -25,68 +25,101 @@ export default function Home() {
             }}
             className="w-full h-full"
           />
-          {/* Glass-like column overlay - positioned on the left side */}
-          <div className="absolute top-0 bottom-0 left-[5%] sm:left-[8%] md:left-[12%] w-[280px] sm:w-[300px] md:w-[350px] bg-white/10 border-r border-white/20 shadow-xl z-30 pointer-events-auto">
-            {/* Content inside the column */}
-            <div className="h-full flex flex-col justify-center px-6 py-8">
-              {/* Booking component directly in the column */}
-              <PremiumNavigation />
-            </div>
-          </div>
+          {/* Glass-like column overlay removed */}
         </div>
         
         <div className="relative z-20 w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-24">
-          {/* Business Card Content - Logo only now */}
-          <div className="flex justify-end items-center max-w-5xl mx-auto">
-            {/* Logo side - now larger and more centered on the right side */}
-            <div className="w-full md:w-3/5 flex justify-center md:justify-end" data-aos="zoom-in" data-aos-duration="1200">
+          {/* Business Card Content - Logo with clear booking button */}
+          <div className="flex flex-col justify-center items-center max-w-5xl mx-auto mt-8 md:mt-12 lg:mt-16">
+            {/* Logo side - centered */}
+            <div className="w-full flex justify-center mb-8 md:mb-10" data-aos="zoom-in" data-aos-duration="1200">
+              <ImageWithFallback 
+                src="/images/logo.png" 
+                fallbackSrc="/images/placeholder.svg"
+                alt="Haven's Skincare Logo" 
+                width={700} 
+                height={350} 
+                sizes="(max-width: 640px) 85vw, (max-width: 768px) 90vw, 700px"
+                className="max-w-full h-auto max-h-[180px] sm:max-h-[220px] md:max-h-[250px] object-contain"
+                priority
+              />
+            </div>
+            
+            {/* Clear booking button below logo */}
+            <div className="mt-6 md:mt-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               <a 
                 href="https://heatherhavens.setmore.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-pointer transition-transform duration-500 hover:scale-105"
+                className="bg-white/20 backdrop-blur-sm text-white border border-white/30 font-medium text-base sm:text-lg px-10 py-3 rounded-none shadow-md hover:bg-white/30 hover:border-white/40 hover:translate-y-[-2px] transition-all duration-300 flex items-center justify-center group w-64 sm:w-80 md:w-96"
               >
-                <ImageWithFallback 
-                  src="/images/logo.png" 
-                  fallbackSrc="/images/placeholder.svg"
-                  alt="Haven's Skincare Logo" 
-                  width={700} 
-                  height={350} 
-                  sizes="(max-width: 640px) 85vw, (max-width: 768px) 90vw, 700px"
-                  className="max-w-full h-auto max-h-[180px] sm:max-h-[220px] md:max-h-[250px] object-contain"
-                  priority
-                />
+                <FiCalendar className="mr-3 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="tracking-wide">BOOK APPOINTMENT</span>
               </a>
+            </div>
+          </div>
+          
+          {/* Small navbar logo in bottom right corner */}
+          <div className="absolute bottom-2 right-4 sm:bottom-3 sm:right-6 z-30">
+            <div className="relative h-8 w-24 sm:h-10 sm:w-32 opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <Image 
+                src="/images/NavbarLogo.png" 
+                alt="Haven's Skincare" 
+                fill
+                style={{ objectFit: 'contain' }}
+                priority
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Overview */}
+      {/* About Section - Migrated from About Page */}
       <section className="py-12 md:py-16 bg-haven-blue/15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-2/6 mb-8 md:mb-0 md:pr-12" data-aos="fade-right" data-aos-duration="800">
-              <div className="relative rounded-lg overflow-hidden shadow-xl aspect-[3/4] max-w-[280px] sm:max-w-[320px] mx-auto md:mx-0">
+          <div className="text-center" data-aos="fade-up" data-aos-duration="1000">
+            <h2 className="text-3xl font-bold text-white mb-4">Experience the Havens Difference</h2>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-12">
+              Bringing tranquility and skin rejuvenation to Newport Beach.
+            </p>
+          </div>
+
+          {/* Owner Bio Section with First Image */}
+          <div className="flex flex-col lg:flex-row items-center gap-12 mb-16">
+            <div className="lg:w-2/5" data-aos="fade-right" data-aos-duration="800">
+              {/* First image */}
+              <div className="relative rounded-lg overflow-hidden shadow-xl aspect-[3/4] max-w-[280px] sm:max-w-[320px] mx-auto">
                 <ImageWithFallback
                   src="/images/owner1.jpeg"
                   fallbackSrc="/images/owner-avatar.png"
-                  alt="Professional esthetician"
-                  fill
-                  sizes="(max-width: 640px) 280px, (max-width: 768px) 320px, 33vw"
-                  style={{ objectFit: "cover" }}
+                  alt="Heather Havens, Professional Esthetician"
+                  width={320}
+                  height={427}
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                  className="rounded-lg"
                 />
+                
+                {/* Small navbar logo in bottom right corner of image */}
+                <div className="absolute bottom-2 right-2 z-10">
+                  <div className="relative h-6 w-16 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                    <Image 
+                      src="/images/NavbarLogo.png" 
+                      alt="Haven's Skincare" 
+                      fill
+                      style={{ objectFit: 'contain' }}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="md:w-2/3" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-                Experience the Havens Difference
-              </h2>
-              <p className="text-white mb-6 text-sm sm:text-base">
-                At Havens Skincare, we bring the tranquility of the California coast into every treatment. 
-                Our Newport Beach studio offers personalized skin care services in a calming, luxurious environment.
-              </p>
-              <ul className="space-y-3 mb-8">
+            <div className="lg:w-3/5" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                About Me
+              </h3>
+              <h4 className="text-xl text-haven-blue mb-6">Founder & Lead Esthetician</h4>
+              
+              {/* Bullet points from original home page */}
+              <ul className="space-y-3 mb-6">
                 <li className="flex items-start" data-aos="fade-up" data-aos-duration="400" data-aos-delay="100">
                   <FiCheck className="text-haven-blue mt-1 mr-2 flex-shrink-0" />
                   <span className="text-white text-sm sm:text-base">Custom treatments tailored to your skin type</span>
@@ -101,13 +134,167 @@ export default function Home() {
                 </li>
                 <li className="flex items-start" data-aos="fade-up" data-aos-duration="400" data-aos-delay="400">
                   <FiCheck className="text-haven-blue mt-1 mr-2 flex-shrink-0" />
-                  <span className="text-white text-sm sm:text-base">Over 10 years of skincare expertise</span>
+                  <span className="text-white text-sm sm:text-base">Over 30 years of skincare expertise</span>
                 </li>
               </ul>
-              <Link href="/about" className="btn-primary btn-with-icon text-sm sm:text-base" data-aos="fade-up" data-aos-delay="500">
-                <FiInfo className="mr-2" />
-                Learn About Our Story
-              </Link>
+              
+              <p className="text-white/90 mb-6">
+                With over 30 years of expertise in the skincare industry, my journey began at the esteemed Dermal Institute, where I developed a deep understanding of advanced skincare techniques. I then refined my craft at the world-renowned Four Seasons, catering to an elite clientele seeking results-driven treatments in a luxurious setting.
+              </p>
+            </div>
+          </div>
+
+          {/* The Havens Approach - Moved between image sections */}
+          <div className="mb-16">
+            <div className="text-center mb-12" data-aos="fade-up" data-aos-duration="800">
+              <h3 className="text-2xl font-bold text-white mb-4">The Havens Approach</h3>
+              <p className="text-white/90 max-w-3xl mx-auto">
+                Our philosophy combines scientific expertise with the natural healing elements of the California coast.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+              {/* Approach 1 */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-haven-blue text-white mb-6">
+                  <FiCheck className="text-2xl" />
+                </div>
+                <h4 className="text-xl font-bold text-white mb-4">Personal Attention</h4>
+                <p className="text-white/80">
+                  Every treatment is customized to your unique skin concerns and goals, with dedicated attention from start to finish.
+                </p>
+              </div>
+              
+              {/* Approach 2 */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center" data-aos="fade-up" data-aos-delay="200">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-haven-blue text-white mb-6">
+                  <FiCheck className="text-2xl" />
+                </div>
+                <h4 className="text-xl font-bold text-white mb-4">Premium Products</h4>
+                <p className="text-white/80">
+                  We use only the highest quality, professionally-formulated products with proven results.
+                </p>
+              </div>
+              
+              {/* Approach 3 */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center" data-aos="fade-up" data-aos-delay="300">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-haven-blue text-white mb-6">
+                  <FiCheck className="text-2xl" />
+                </div>
+                <h4 className="text-xl font-bold text-white mb-4">Coastal Serenity</h4>
+                <p className="text-white/80">
+                  Our tranquil environment is designed to soothe the senses, inspired by the beauty of the California coast.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Professional Journey with Second Image */}
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-12 mb-16">
+            <div className="lg:w-2/5" data-aos="fade-left" data-aos-duration="800">
+              {/* Second image */}
+              <div className="relative rounded-lg overflow-hidden shadow-xl aspect-[3/4] max-w-[280px] sm:max-w-[320px] mx-auto">
+                <ImageWithFallback
+                  src="/images/Owner3.jpeg"
+                  fallbackSrc="/images/owner-avatar.png"
+                  alt="Heather Havens, Founder and Lead Esthetician"
+                  width={320}
+                  height={427}
+                  style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                  className="rounded-lg"
+                />
+                
+                {/* Small navbar logo in bottom right corner of image */}
+                <div className="absolute bottom-2 right-2 z-10">
+                  <div className="relative h-6 w-16 opacity-80 hover:opacity-100 transition-opacity duration-300">
+                    <Image 
+                      src="/images/NavbarLogo.png" 
+                      alt="Haven's Skincare" 
+                      fill
+                      style={{ objectFit: 'contain' }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="lg:w-3/5" data-aos="fade-right" data-aos-duration="800" data-aos-delay="200">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                My Professional Journey
+              </h3>
+              <p className="text-white/90 mb-6">
+                At 25, I launched my own facial studio, offering personalized skincare solutions tailored to the needs of discerning clients. My passion for corrective skincare led me to work alongside a top cosmetic dermatologist, where I specialized in treating acne-prone skin and mastering microdermabrasion techniques to restore balance and radiance.
+              </p>
+              <p className="text-white/90 mb-6">
+                After taking time to focus on my family and adopting a beautiful son along the way, life took an unexpected turn when I tragically lost my oldest son. In the wake of profound loss, I was guided back to my true passion—helping others achieve healthy, luminous skin. Skincare is more than a profession for me; it is a calling, a way to bring healing and confidence to those I touch.
+              </p>
+              <p className="text-white/90 mb-6">
+                Now, I bring my decades of expertise, unwavering dedication, and personalized care to an exclusive clientele who seek not just treatments, but transformative skincare experiences. My goal is to create an oasis of renewal, where science meets luxury, and every client leaves feeling restored, radiant, and deeply cared for.
+              </p>
+              <div className="flex space-x-4" data-aos="fade-up" data-aos-delay="400">
+                <span className="inline-flex items-center text-haven-blue">
+                  <FiCheck className="mr-2" /> Licensed Esthetician
+                </span>
+                <span className="inline-flex items-center text-haven-blue">
+                  <FiCheck className="mr-2" /> Advanced Training
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Our Mission */}
+          <div className="flex flex-col lg:flex-row gap-6 mb-16">
+            {/* Havens Mission Section */}
+            <div className="lg:w-3/5" data-aos="fade-right" data-aos-duration="800">
+              <div className="text-center h-full flex flex-col justify-center">
+                <h3 className="text-2xl font-bold text-white mb-4">The Havens Mission</h3>
+                <p className="text-lg text-white/90 italic mb-5">
+                  &quot;To enhance your natural beauty with personalized treatments that rejuvenate both skin and spirit.&quot;
+                </p>
+                <p className="text-white/80 mb-5">
+                  At Havens Skincare, we&#39;re dedicated to providing exceptional skincare services. We combine the latest skincare innovations with natural elements for treatments that leave you feeling refreshed, renewed, and radiant.
+                </p>
+                <div className="flex justify-center w-full">
+                  <div className="inline-flex items-center text-haven-blue text-sm" data-aos="zoom-in" data-aos-delay="400">
+                    <FiCheck className="mr-2" /> Personalized Care For Every Client
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* In Loving Memory Section */}
+            <div className="lg:w-2/5 lg:border-l lg:border-white/20 lg:pl-6" data-aos="fade-left" data-aos-duration="800">
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-white mb-4">In Loving Memory</h3>
+                <div className="flex flex-col items-center">
+                  <div className="w-full max-w-[180px] mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <div className="relative w-full mx-auto rounded-lg overflow-hidden" 
+                      style={{ 
+                        boxShadow: '0 0 20px rgba(255, 215, 170, 0.25)',
+                        border: '2px solid rgba(255,255,255,0.2)',
+                        maxWidth: "100%", 
+                        height: "auto" 
+                      }}>
+                      <ImageWithFallback
+                        src="/images/Chasen.JPG"
+                        fallbackSrc="/images/owner-avatar.png"
+                        alt="In loving memory of Chasen"
+                        width={428}
+                        height={535}
+                        style={{ objectFit: 'contain', width: "100%", height: "auto" }}
+                        className="rounded-lg"
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full text-center mt-4" data-aos="fade-up" data-aos-delay="300">
+                    <p className="text-white/90 italic mb-2">
+                      This space is dedicated to the loving memory of my son Chasen.
+                    </p>
+                    <p className="text-white/80">
+                      His spirit and light continue to inspire our mission of healing and transformation.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -221,6 +408,18 @@ export default function Home() {
               <FiCalendar className="mr-2" />
               Book Your Appointment
             </a>
+            
+            {/* Small navbar logo below CTA button */}
+            <div className="mt-8 flex justify-center">
+              <div className="relative h-8 w-24 opacity-70 hover:opacity-100 transition-opacity duration-300">
+                <Image 
+                  src="/images/NavbarLogo.png" 
+                  alt="Haven's Skincare" 
+                  fill
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

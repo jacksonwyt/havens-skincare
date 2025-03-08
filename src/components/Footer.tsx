@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { FiMapPin, FiPhone, FiMail, FiClock, FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -97,12 +98,6 @@ const Footer = () => {
                 </Link>
               </div>
               <div>
-                <Link href="/about" className="footer-link hover:underline flex items-center group text-xs sm:text-sm">
-                  <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-white rounded-full mr-1.5 sm:mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
-                  About Us
-                </Link>
-              </div>
-              <div>
                 <Link href="/services" className="footer-link hover:underline flex items-center group text-xs sm:text-sm">
                   <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-white rounded-full mr-1.5 sm:mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300"></span>
                   Services
@@ -126,16 +121,27 @@ const Footer = () => {
 
         <div className="border-t border-white/10 mt-8 sm:mt-12 pt-4 sm:pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="footer-link text-xs sm:text-sm">
-              &copy; {new Date().getFullYear()} Havens Skincare. All rights reserved.
-            </p>
-            <div className="flex space-x-4 sm:space-x-6 mt-3 md:mt-0">
+            <div className="flex items-center">
+              <p className="footer-link text-xs sm:text-sm">
+                &copy; {new Date().getFullYear()} Havens Skincare. All rights reserved.
+              </p>
+            </div>
+            <div className="flex items-center space-x-4 sm:space-x-6 mt-3 md:mt-0">
               <Link href="/privacy-policy" className="footer-link text-xs sm:text-sm hover:underline">
                 Privacy Policy
               </Link>
               <Link href="/terms-of-service" className="footer-link text-xs sm:text-sm hover:underline">
                 Terms of Service
               </Link>
+              <div className="relative h-8 w-24 ml-2">
+                <Image 
+                  src="/images/NavbarLogo.png" 
+                  alt="Haven's Skincare" 
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  className="opacity-70 hover:opacity-100 transition-opacity duration-300"
+                />
+              </div>
             </div>
           </div>
         </div>
