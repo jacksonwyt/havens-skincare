@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image, { ImageProps } from 'next/image';
 
 type ImageWithFallbackProps = Omit<ImageProps, 'src'> & {
@@ -14,32 +14,59 @@ type ImageWithFallbackProps = Omit<ImageProps, 'src'> & {
  */
 const ImageWithFallback = ({ 
   src, 
-  fallbackSrc,
+  fallbackSrc = '/images/placeholder.svg',
+  alt,
   ...props 
 }: ImageWithFallbackProps) => {
-  const [fallbackLevel, setFallbackLevel] = useState(0);
+  const [imgSrc, setImgSrc] = useState<string>(src);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
   
-  // Determine which source to use based on fallback level
-  let imgSrc = src;
-  
-  if (fallbackLevel === 1) {
-    // First fallback: try SVG version of the same file
-    imgSrc = src.replace(/\.(jpg|jpeg|png|PNG)$/i, '.svg');
-  } else if (fallbackLevel === 2) {
-    // Second fallback: use provided fallback or default placeholder
-    imgSrc = fallbackSrc || '/images/placeholder.svg';
-  }
+  // Reset states when src changes
+  useEffect(() => {
+    setImgSrc(src);
+    setLoading(true);
+    setError(false);
+  }, [src]);
+
+  const handleError = () => {
+    setError(true);
+    setLoading(false);
+    
+    // Try to determine if we should use a different extension
+    if (imgSrc === src) {
+      // First try the fallback source if it's different from the original
+      if (fallbackSrc && fallbackSrc !== src) {
+        setImgSrc(fallbackSrc);
+      } 
+      // Otherwise try to convert to SVG
+      else if (/\.(jpg|jpeg|png|PNG|JPG|JPEG)$/i.test(src)) {
+        const svgVersion = src.replace(/\.(jpg|jpeg|png|PNG|JPG|JPEG)$/i, '.svg');
+        setImgSrc(svgVersion);
+      } 
+      // If all else fails, use the placeholder
+      else {
+        setImgSrc('/images/placeholder.svg');
+      }
+    } else if (imgSrc !== '/images/placeholder.svg') {
+      // If we've already tried a fallback but not the placeholder, use the placeholder
+      setImgSrc('/images/placeholder.svg');
+    }
+  };
 
   return (
     <Image
       {...props}
       src={imgSrc}
-      onError={() => {
-        if (fallbackLevel < 2) {
-          setFallbackLevel(fallbackLevel + 1);
-        }
-      }}
+      alt={alt || "Image"}
+      onError={handleError}
+      onLoad={() => setLoading(false)}
       sizes={props.sizes || "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
+      style={{
+        ...props.style,
+        opacity: loading ? 0.5 : 1,
+        transition: 'opacity 0.3s ease-in-out',
+      }}
     />
   );
 };

@@ -1,0 +1,23 @@
+{
+  "images": {
+    "sizes": [256, 640, 1280, 1920],
+    "domains": ["*"],
+    "minimumCacheTTL": 60
+  },
+  "headers": [
+    {
+      "source": "/images/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_VERCEL_URL": "${VERCEL_URL}"
+    }
+  }
+} 
