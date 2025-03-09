@@ -27,7 +27,7 @@ const services = [
         description: 'This age-defying facial is infused with plant stem cell technology and peptides to visibly smooth fine lines, firm the skin, and restore hydration. Featuring Epicurens powerful InjecStem™ Bio-Firming Serum, this treatment is ideal for those seeking a non-invasive alternative to injectables, delivering a lifted and sculpted appearance.',
         price: '$175',
         duration: '75 min',
-        image: '/images/inject-stem.jpeg',
+        image: '/images/inject-stem.JPEG',
       },
      {
         id: 'pumpkin-apple-spice-peel',
@@ -43,7 +43,7 @@ const services = [
         description: 'A powerful resurfacing treatment using Epicurens Glycolic Polymer Solution to dissolve dead skin cells, even out skin tone, and minimize pores. This facial promotes collagen production, leaving your skin smoother, brighter, and more youthful. Recommended for uneven skin tone, hyperpigmentation, and fine lines.',
         price: '$165',
         duration: '60 min',
-        image: '/images/signaturefacial.png',
+        image: '/images/signaturefacial.PNG',
       },
       {
         id: 'compromised-skin-recovery',
@@ -59,7 +59,7 @@ const services = [
         description: 'Designed specifically for teen skin, this 30-minute acne-focused facial helps clear breakouts, reduce inflammation, and prevent future congestion. The treatment begins with a deep cleanse and gentle exfoliation, followed by high-frequency therapy to target acne-causing bacteria and promote healing. A detoxifying clay mask is then applied to absorb excess oil and calm the skin, leaving it balanced and refreshed. Perfect for teens struggling with breakouts, this treatment provides professional-grade care in a quick, effective session.',
         price: '$75',
         duration: '30 min',
-        image: '/images/teen-facial.jpg',
+        image: '/images/teen-facial.JPG',
       },
       {
         id: 'renew-glow-facial',
@@ -67,7 +67,7 @@ const services = [
         description: 'Experience the ultimate skin rejuvenation with our Microdermabrasion & LED Light Therapy Facial. This advanced treatment begins with a deep cleanse and gentle exfoliation, followed by microdermabrasion to resurface and refine your skin&apos;s texture, reducing the appearance of fine lines, sun damage, and congestion. A customized LED light therapy mask is then applied to target specific skin concerns such as acne, inflammation, or collagen production, leaving your skin radiant and refreshed. This facial is perfect for those looking to achieve a smoother, brighter, and more youthful complexion in just one hour.',
         price: '$225',
         duration: '60 min',
-        image: '/images/renew-glow.png',
+        image: '/images/renew-glow.PNG',
       }
     ]
   },
