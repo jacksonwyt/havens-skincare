@@ -1,4 +1,4 @@
-# Haven's Skincare Development Guide
+# Havens Skincare Development Guide
 
 ## Build Commands
 - `npm run dev` - Start development server

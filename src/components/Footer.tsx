@@ -135,7 +135,7 @@ const Footer = () => {
               <div className="relative h-8 w-24 ml-2">
                 <Image 
                   src="/images/NavbarLogo.png" 
-                  alt="Haven's Skincare" 
+                  alt="Havens Skincare" 
                   fill
                   style={{ objectFit: 'contain' }}
                   className="opacity-70 hover:opacity-100 transition-opacity duration-300"

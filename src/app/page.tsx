@@ -55,7 +55,7 @@ export default function Home() {
               <ImageWithFallback 
                 src="/images/logo.png" 
                 fallbackSrc="/images/placeholder.svg"
-                alt="Haven's Skincare Logo" 
+                alt="Havens Skincare Logo" 
                 width={700} 
                 height={350} 
                 sizes="(max-width: 640px) 85vw, (max-width: 768px) 90vw, 700px"
@@ -70,7 +70,7 @@ export default function Home() {
             <div className="relative h-8 w-24 sm:h-10 sm:w-32 opacity-70 hover:opacity-100 transition-opacity duration-300">
               <Image 
                 src="/images/NavbarLogo.png" 
-                alt="Haven's Skincare" 
+                alt="Havens Skincare" 
                 fill
                 style={{ objectFit: 'contain' }}
                 priority
@@ -110,7 +110,7 @@ export default function Home() {
                   <div className="relative h-6 w-16 opacity-80 hover:opacity-100 transition-opacity duration-300">
                     <Image 
                       src="/images/NavbarLogo.png" 
-                      alt="Haven's Skincare" 
+                      alt="Havens Skincare" 
                       fill
                       style={{ objectFit: 'contain' }}
                     />
@@ -215,7 +215,7 @@ export default function Home() {
                   <div className="relative h-6 w-16 opacity-80 hover:opacity-100 transition-opacity duration-300">
                     <Image 
                       src="/images/NavbarLogo.png" 
-                      alt="Haven's Skincare" 
+                      alt="Havens Skincare" 
                       fill
                       style={{ objectFit: 'contain' }}
                     />
@@ -420,7 +420,7 @@ export default function Home() {
               <div className="relative h-8 w-24 opacity-70 hover:opacity-100 transition-opacity duration-300">
                 <Image 
                   src="/images/NavbarLogo.png" 
-                  alt="Haven's Skincare" 
+                  alt="Havens Skincare" 
                   fill
                   style={{ objectFit: 'contain' }}
                 />

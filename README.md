@@ -1,4 +1,4 @@
-# Haven's Skincare - Esthetician Website
+# Havens Skincare - Esthetician Website
 
 A professional website for an esthetician business located in Newport Beach, California. This website embodies a California coast vibe and includes the following pages: a landing page, an about page, a contact page, a services page, and a booking feature.
 

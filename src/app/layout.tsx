@@ -9,7 +9,7 @@ import ViewportHeightFix from "@/components/ViewportHeightFix";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Haven's Skincare | Esthetician in Newport Beach, CA",
+  title: "Havens Skincare | Esthetician in Newport Beach, CA",
   description: "Professional esthetician services in Newport Beach, California. Facials, skin treatments, and personalized skincare plans with a California coast vibe.",
   keywords: "esthetician Newport Beach, facial treatments California, skincare Newport Beach, California esthetician, beauty treatments Orange County",
 };

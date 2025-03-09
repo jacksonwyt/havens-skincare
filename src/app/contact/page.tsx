@@ -2,8 +2,8 @@ import { FiMapPin, FiPhone, FiMail, FiClock } from 'react-icons/fi';
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: "Contact Us | Haven's Skincare - Newport Beach Esthetician",
-  description: "Get in touch with Haven's Skincare in Newport Beach, California. Book appointments, ask questions, or find our location information.",
+  title: "Contact Us | Havens Skincare - Newport Beach Esthetician",
+  description: "Get in touch with Havens Skincare in Newport Beach, California. Book appointments, ask questions, or find our location information.",
 }
 
 export default function Contact() {

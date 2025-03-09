@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
                 <div className="relative h-10 w-40 sm:h-12 sm:w-48 transition-all duration-300 hover:opacity-90">
                   <Image 
                     src="/images/NavbarLogo.png" 
-                    alt="Haven's Skincare" 
+                    alt="Havens Skincare" 
                     fill
                     style={{ objectFit: 'contain' }}
                     className="transition-transform duration-300 hover:scale-105"

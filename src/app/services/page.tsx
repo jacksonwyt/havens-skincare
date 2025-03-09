@@ -2,8 +2,8 @@ import { FiClock, FiDollarSign, FiPlus } from 'react-icons/fi';
 import ImageWithFallback from '@/components/ImageWithFallback';
 
 export const metadata = {
-  title: "Services | Haven's Skincare - Newport Beach Esthetician",
-  description: "Explore our range of premium skincare services, including facials, peels, and custom treatments at Haven's Skincare in Newport Beach, California.",
+  title: "Services | Havens Skincare - Newport Beach Esthetician",
+  description: "Explore our range of premium skincare services, including facials, peels, and custom treatments at Havens Skincare in Newport Beach, California.",
 }
 
 // Define service categories and details
